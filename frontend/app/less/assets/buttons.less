@@ -1,0 +1,50 @@
+/**
+ Mixin que seta um botao
+*/
+.setBtn(@color, @w:auto, @h:auto, @fontFamily: @mainFontLight ) {
+	display: inline-block;
+	text-align: center;
+	.size(@w, @h);
+	.btn-link {
+		display: block; 
+		text-transform: uppercase;
+		padding: 12px 20px;
+		font-size: 16px;
+		background-color: @color;
+		color: #fff;
+		font-family: @fontFamily;
+		text-decoration: none;
+		.border-radius(5px);
+		.transition(all 350ms linear);
+		&:hover {
+			background-color: darken(@color, 15%);
+		};
+		&:before {
+			content: "";
+			margin-right: 5px;
+			.icon-arrow-right;
+		}
+	}
+	&.double-line {
+		.btn-link {
+			position: relative;
+			padding: 12px 30px 12px 35px;
+			line-height: 19px;
+			&:before {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				left: 20px;
+			}
+		}
+	}
+}
+
+.btn-def {
+	.setBtn(@secColor);
+}
+
+.btn-silver {
+	.setBtn(@brown);
+}

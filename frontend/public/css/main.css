@@ -1,0 +1,226 @@
+/** Colors */
+/** variaveis apenas para uso do conteudo estatico de marcacao */
+/**
+ Padrao de botao duplo com link na segunda linha
+*/
+/**
+ Mixin que seta um botao
+*/
+.icon {
+  display: inline-block;
+}
+.icon-sprite {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+}
+/**
+ Setas
+*/
+.icon-arrow-right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #ffffff;
+}
+.icon-arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #ffffff;
+}
+.icon-arrow-slin {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 32px;
+  height: 57px;
+}
+.icon-arrow-slin.left {
+  background-position: 0px -144px;
+}
+.icon-arrow-slin.right {
+  background-position: -32px -144px;
+}
+.icon-arrow-ball {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 39px;
+  height: 39px;
+}
+.icon-arrow-ball.left {
+  background-position: -16px -48px;
+}
+.icon-arrow-ball.right {
+  background-position: -64px -48px;
+}
+.icon-arrow-down-mult {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 12px;
+  height: 48px;
+  background-position: 0px -48px;
+}
+.icon-ball-arr-left {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 63px;
+  height: 56px;
+  background-position: -80px -144px;
+  position: relative;
+}
+.icon-ball-arr-left .icb-text {
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'gill_sans_std_bold';
+  font-size: 12px;
+  position: absolute;
+  left: 11px;
+  right: 0;
+  top: 19px;
+}
+.icon-check-def {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: -96px 0px;
+}
+.icon-close-small {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: -112px 0px;
+}
+.icon-quad_small {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 35px;
+  height: 35px;
+}
+.icon-hard {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 35px;
+  height: 35px;
+  background-position: 0px 0px;
+}
+.icon-trophy {
+  display: inline-block;
+  background: url("/img/sprite.png") no-repeat;
+  width: 35px;
+  height: 35px;
+  background-position: -48px 0px;
+}
+.btn-def {
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+.btn-def .btn-link {
+  display: block;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #f76c03;
+  color: #fff;
+  font-family: 'gill_sans_light';
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  -ms-transition: all 350ms linear;
+  -o-transition: all 350ms linear;
+}
+.btn-def .btn-link:hover {
+  background-color: #ab4b02;
+}
+.btn-def .btn-link:before {
+  content: "";
+  margin-right: 5px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #ffffff;
+}
+.btn-def.double-line .btn-link {
+  position: relative;
+  padding: 12px 30px 12px 35px;
+  line-height: 19px;
+}
+.btn-def.double-line .btn-link:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 20px;
+}
+.btn-silver {
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+.btn-silver .btn-link {
+  display: block;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #5c554e;
+  color: #fff;
+  font-family: 'gill_sans_light';
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  -ms-transition: all 350ms linear;
+  -o-transition: all 350ms linear;
+}
+.btn-silver .btn-link:hover {
+  background-color: #332f2b;
+}
+.btn-silver .btn-link:before {
+  content: "";
+  margin-right: 5px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #ffffff;
+}
+.btn-silver.double-line .btn-link {
+  position: relative;
+  padding: 12px 30px 12px 35px;
+  line-height: 19px;
+}
+.btn-silver.double-line .btn-link:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 20px;
+}
+/** aplicar estilos da base aqui */
+/** importar os arquivos das sessoes conforme exemplo abaixo
+@import './home/highlight';
+@import './home/content';
+*/

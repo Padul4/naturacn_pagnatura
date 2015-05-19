@@ -1,0 +1,31 @@
+{{> head}}
+{{> header}}
+
+<!-- bibliotecas js -->
+<script src="js/vendor.min.js"></script>
+<!-- // bibliotecas js -->
+
+
+<div id="trocar">
+	<h1>Novo projeto</h1>
+	<p>
+		<strong>baseUrl: {{baseUrl}}</strong>
+	</p>
+	<p>
+		<strong>Exemplo link: </strong>
+		<a href="{{baseUrl}}/dois{{extPage}}" title="Pagina dois">
+			pagina dois
+		</a>
+	</p>
+</div>
+
+<!-- scrips da aplicacao -->
+<script type="text/javascript">
+$(document).ready(function($) {
+	loadjs('{{baseUrl}}/js/main{{ext}}.js');
+});
+</script>
+<!-- // scrips da aplicacao -->
+
+{{> footer}}
+{{> foot}}
