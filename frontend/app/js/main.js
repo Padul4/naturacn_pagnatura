@@ -1,6 +1,6 @@
 var Main = {
 	init: function () {
-		console.log('ola mundo!');
+		console.log('ola mundo!!');
 	}
 };
 $(document).ready(function() {
