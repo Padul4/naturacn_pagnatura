@@ -4,7 +4,6 @@ var Cards = {
 		this.build();
 		this.bind();
 		this.setPageProps();
-		console.log(this.isOpened);
 	},
 	setEls: function() {
 		this.$btnLeft = $('.card-det .btn-arrow.left');
@@ -42,6 +41,7 @@ var Cards = {
 				_that.$listCards.fadeOut();
 				_that.showContent(index, function() {
 					_that.$father.addClass('actived');
+					_that.setHeight();
 					_that.goTo(index);
 				});
 			}
@@ -88,7 +88,7 @@ var Cards = {
 		var $card = this.$cards.eq(this.c_item);
 		return {
 			title: $card.data('title'),
-			pgSize: $card.data('size') 
+			pgSize: $card.data('pgsize') 
 		}
 	},
 	setPageProps: function() {
@@ -108,6 +108,14 @@ var Cards = {
 		anima.eventCallback('onComplete', function() {
 			callback();
 		});
+	},
+	setHeight: function() {
+		var data = this.getPageProps();
+		var anima = TweenLite.to($('.pagnatura-cards'), 0.2, {height: data.pgSize});
+		anima.eventCallback('onComplete', function() {
+			console.log('finalizou a funcao');
+		})
+		//$('.pagnatura-cards').height(data.pgSize);
 	}
 };
 export default Cards;
