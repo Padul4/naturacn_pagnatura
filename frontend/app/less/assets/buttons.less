@@ -1,17 +1,17 @@
 /**
  Mixin que seta um botao
 */
-.setBtn(@color, @w:auto, @h:auto, @fontFamily: @mainFontLight ) {
+.setBtn(@color, @txtcolor:#ffffff, @w:auto, @h:auto, @fontFamily: @mainFontLight ) {
 	display: inline-block;
 	text-align: center;
 	.size(@w, @h);
 	.btn-link {
 		display: block; 
 		text-transform: uppercase;
-		padding: 12px 20px;
+		padding: 7px 12px;
 		font-size: 16px;
 		background-color: @color;
-		color: #fff;
+		color: @txtcolor;
 		font-family: @fontFamily;
 		text-decoration: none;
 		.border-radius(5px);
@@ -22,7 +22,7 @@
 		&:before {
 			content: "";
 			margin-right: 5px;
-			.icon-arrow-right;
+			.setIconArrowRight(5px, @txtcolor);
 		}
 	}
 	&.double-line {
@@ -42,9 +42,38 @@
 }
 
 .btn-def {
-	.setBtn(white);
+	.setBtn(@white);
 }
-
+.btn-saiba-mais{
+	.setBtn(@white, @red_light, @fontFamily: @mainFont);
+	.btn-link{
+		.border-radius(10px);
+		font-size: 14px;
+	}
+	&:hover{
+		.btn-link{
+			background-color: @white;
+		}
+	};
+}
+.btn-compre-agora{
+	.setBtn(@red_light, @white, @fontFamily: @mainFont);
+	.btn-link{
+		.border-radius(10px);
+		font-size: 14px;
+	}
+	&:hover{
+		.btn-link{
+			/*background-color: blue;*/
+		}
+	};
+}
 .btn-silver {
-	.setBtn(red);
+	.setBtn(@gray_dark);
+}
+.btn-cadastro{
+	.setBtn(#f76c03, @white, @fontFamily: @mainFont);
+	.btn-link{		
+		padding: 0;
+	}
 }
