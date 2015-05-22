@@ -37,9 +37,9 @@ gulp.task('templates', function() {
  Compila arquivos para ambiente de QA
 */
 gulp.task('templates:salveqa', function salveqa() {
-	var envPath = path.join(resourcesPath, 'profiles/salveqa/frontend/app');
+	var envPath = path.join(resourcesPath, 'profiles/salveqa/frontend');
 
-	var preCompData = require(path.join(envPath, 'templates/pre-compile-info', 'default'));
+	var preCompData = require(path.join(envPath, 'app/templates/pre-compile-info', 'default'));
 
 	 gulp.src(path.join(appPath, 'templates', '*.hbs'))
 		.pipe(handlebars(preCompData, options))
@@ -53,9 +53,9 @@ gulp.task('templates:salveqa', function salveqa() {
  Compila arquivos para ambiente de Stage
 */
 gulp.task('templates:stage', function stage() {
-	var envPath = path.join(resourcesPath, 'profiles/stage/frontend/app');
+	var envPath = path.join(resourcesPath, 'profiles/stage/frontend');
 
-	var preCompData = require(path.join(envPath, 'templates/pre-compile-info', 'default'));
+	var preCompData = require(path.join(envPath, 'app/templates/pre-compile-info', 'default'));
 
 	 gulp.src(path.join(appPath, 'templates', '*.hbs'))
 		.pipe(handlebars(preCompData, options))
@@ -69,9 +69,9 @@ gulp.task('templates:stage', function stage() {
  Compila arquivos para ambiente de Producao
 */
 gulp.task('templates:prod', function prod() {
-	var envPath = path.join(resourcesPath, 'profiles/prod/frontend/app');
+	var envPath = path.join(resourcesPath, 'profiles/prod/frontend');
 
-	var preCompData = require(path.join(envPath, 'templates/pre-compile-info', 'default'));
+	var preCompData = require(path.join(envPath, 'app/templates/pre-compile-info', 'default'));
 
 	 gulp.src(path.join(appPath, 'templates', '*.hbs'))
 		.pipe(handlebars(preCompData, options))
