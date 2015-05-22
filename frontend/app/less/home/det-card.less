@@ -1,0 +1,66 @@
+.card-det {
+	position: absolute;
+	top: -1000px;
+	&.actived {
+		position: relative;
+		top: 0;
+		margin-top: 200px;
+	}
+	.card-header {
+		position: relative;
+		.hd-content {
+			font-family: @mainFontBold;
+			text-align: center;
+			font-size: 30px;
+			padding: 10px;
+		}
+		.btn-arrow {
+			position: absolute;
+			top: 0;
+			background-color: red;
+			cursor: pointer;
+			.size(30px, 30px);
+			&.left {
+				left: 0;
+			}
+			&.right {
+				right: 0;
+			}
+		}
+	}
+	.card-footer {
+		border-bottom: 3px solid #8a3729;
+		.bulets {
+			padding: 10px;
+			text-align: center;
+			.bulet {
+				display: inline-block;
+				background-color: #e9e9e9;
+				.border-radius(7px);
+				.size(7px, 7px);
+				.transition(all 300ms linear);
+				&.actived {
+					background-color: @orange;
+				}
+			}
+		}
+	}
+	.btn-close {
+		.size(48px, 48px);
+		background-color: blue;
+		cursor: pointer;
+		top: 0;
+		right: 0;
+		position: absolute;
+	}
+	.card-det-viewport {
+		overflow: hidden;
+		.card-det-wrap {
+			overflow: hidden;
+			.card-item {
+				width: 980px;
+				float: left;
+			}
+		}
+	}
+}

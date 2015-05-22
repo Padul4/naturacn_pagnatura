@@ -1,6 +1,8 @@
+// refazer
+import Cards from './cards';
 var Main = {
 	init: function () {
-		console.log('ola mundo!!');
+		Cards.init();
 	}
 };
 $(document).ready(function() {
