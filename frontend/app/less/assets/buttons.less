@@ -47,8 +47,11 @@
 .btn-saiba-mais{
 	.setBtn(@white, @red_light, @fontFamily: @mainFont);
 	.btn-link{
+		.inner-shadow(0, -10px, 30px, 1px);
 		.border-radius(10px);
+		border: 2px solid #d7d7d7;
 		font-size: 14px;
+		padding: 15px 17px;
 	}
 	&:hover{
 		.btn-link{
@@ -57,15 +60,20 @@
 	};
 }
 .btn-compre-agora,
-.btn-imprimir-tabela{
+.btn-imprimir-tabela,
+.btn-saiba-mais-info{
 	.setBtn(@red_light, @white, @fontFamily: @mainFont);
 	.btn-link{
 		.border-radius(10px);
 		font-size: 14px;
+		padding: 15px 17px;
+		border: 1px solid #d95e4a;
+		.gradient (@startColor: #cb4d38, @endColor: #d9604d)
 	}
 	&:hover{
 		.btn-link{
-			/*background-color: blue;*/
+			.gradient (@startColor: #d9604d, @endColor: #cb4d38);
+			
 		}
 	};
 }
@@ -73,6 +81,13 @@
 	font-size: 14px;
 	font-family: @mainFont;
 	color: @orange;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.btn-clique-aqui{
+	font-size: 14px;
+	font-family: @mainFont;
+	color: @red_light;
 	text-decoration: none;
 	text-transform: uppercase;
 }
