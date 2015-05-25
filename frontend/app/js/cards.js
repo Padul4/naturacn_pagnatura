@@ -52,6 +52,9 @@ var Cards = {
 				});
 			}
 		});
+		$('.btn-print').on('click', function(e) {
+
+		})
 		this.$close.on('click', function() {
 			_that.hideContent(function() {
 				_that.clearHeight();
