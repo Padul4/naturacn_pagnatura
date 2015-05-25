@@ -60,6 +60,7 @@ var Cards = {
 		console.log(this.isOpened);
 		this.c_item = index;
 		anima.eventCallback('onComplete', function() {
+			_that.setHeight();
 			_that.changeBulet();
 			_that.setPageProps();
 		});
@@ -104,7 +105,7 @@ var Cards = {
 	},
 	hideContent: function(callback) {
 		var callback = callback || function() {};
-		var anima = TweenLite.to(this.$father, 0.5, {top: '-1000px'});
+		var anima = TweenLite.to(this.$father, 0.5, {top: '-2000px'});
 		anima.eventCallback('onComplete', function() {
 			callback();
 		});

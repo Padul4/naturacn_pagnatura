@@ -1,6 +1,6 @@
 .card-det {
 	position: absolute;
-	top: -1000px;
+	top: -400px;
 	&.actived {
 		position: relative;
 		top: 0;
@@ -12,22 +12,29 @@
 			font-family: @mainFontBold;
 			text-align: center;
 			font-size: 30px;
-			padding: 10px;
+			padding: 40px 0px;
 		}
 		.btn-arrow {
 			position: absolute;
-			top: 0;
-			background-color: red;
 			cursor: pointer;
-			.size(30px, 30px);
+			.size(35px, 45px);
 			&.left {
-				left: 0;
+				margin-left: 45px;
+				margin-top: 35px;
 			}
 			&.right {
-				right: 0;
+				  margin-right: 45px;
+				  margin-top: 35px;
+				  right: 0;
 			}
 		}
 	}
+	.card-content{
+		margin: 0 48px;
+		font-size: 16px;
+		font-family: @mainFont;
+	}
+	
 	.card-footer {
 		border-bottom: 3px solid #8a3729;
 		.bulets {
@@ -46,11 +53,12 @@
 		}
 	}
 	.btn-close {
+		background: url(../img/btn-close.png);
 		.size(48px, 48px);
-		background-color: blue;
+		z-index: 1;
 		cursor: pointer;
-		top: 0;
-		right: 0;
+		top: 3px;
+		right: 0px;
 		position: absolute;
 	}
 	.card-det-viewport {
