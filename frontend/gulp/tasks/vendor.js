@@ -28,8 +28,10 @@ gulp.task('vendor', function() {
 		'greensock/src/uncompressed/easing/EasePack.js'*/
 	].map(bowerize);
 
-	var helperFile = path.join(appPath, 'js/helpers.js')
+	var helperFile = path.join(appPath, 'js/helpers.js');
+	var YoutubeFile = path.join(appPath, 'js/Youtube.js');
 	sources = [helperFile].concat(sources);
+	sources.push(YoutubeFile);
 
 	gulp.src(sources)
 		.pipe(uglyfy())

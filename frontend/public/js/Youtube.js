@@ -1,14 +1,5 @@
 var Pr = window.Pr || {};
 
-// Youtube API
-//-------------------------------------------------------------
-(function () {
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-}());
-
 // Youtube
 //-------------------------------------------------------------
 Pr.Youtube = (function () {
@@ -91,6 +82,19 @@ Pr.Youtube = (function () {
 		}
 	};
 
+	publicObj.loadApi = function(callback) {
+		// Youtube API
+		//-------------------------------------------------------------
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		window.onYouTubeIframeAPIReady = function() {
+			callback();
+		}
+	};
+
 	return publicObj;
 
 }());
@@ -113,7 +117,13 @@ Pr.YTPlayer = function ($wrapper, options) {
 	};
 
 	// create player
-	player = new YT.Player($wrapper[0], options);
+	if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
+		publicObj.loadApi(function() {
+			player = new YT.Player($wrapper[0], options);	
+		});
+	} else {
+		player = new YT.Player($wrapper[0], options);
+	}
 
 	// save current video Id
 	currentVideoId = options.videoId;
