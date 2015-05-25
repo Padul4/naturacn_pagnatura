@@ -61,11 +61,12 @@ var Cards = {
 			});
 		});
 		this.$cdpTab.on('click', function() {
+			var tab = $(this).data('tab');
 			_that.$cdpTab.removeClass('actived');
 			$(this).addClass('actived');
-			_that.changeTab($(this).data('tab'));
+			_that.changeTab(tab);
+			ga('send', 'event', 'Vc_Conecta', 'Aba_' + tab, 'Botao');
 		});
-
 	},
 	goTo: function(index) {
 		var _that = this;
@@ -79,6 +80,13 @@ var Cards = {
 			_that.setHeight();
 			_that.changeBulet();
 			_that.setPageProps();
+
+			// track
+			var data = _that.getPageProps();
+			ga('send', 'pageview', {
+			  'page': '/www/consultoria/apoio-ao-consultor/voce-conecta/light-box/' + data.titTrack,
+			  'title': 'Voce conecta - Light Box - ' + data.title + ' | Natura'
+			});
 		});
 	},
 	next: function() {
@@ -87,6 +95,8 @@ var Cards = {
 			this.c_item = this.totalItems;
 			return false;
 		}
+		var data = this.getPageProps(target);
+		ga('send', 'event', 'Vc_Conecta', data.titTrack, 'Botao');
 		this.goTo(target);
 	},
 	prev: function() {
@@ -95,17 +105,21 @@ var Cards = {
 			this.c_item = 0;
 			return false;
 		}
+		var data = this.getPageProps(target);
+		ga('send', 'event', 'Vc_Conecta', data.titTrack, 'Botao');
 		this.goTo(target);	
 	},
 	changeBulet: function() {
 		this.$bulets.removeClass('actived');
 		this.$bulets.eq(this.c_item).addClass('actived');
 	},
-	getPageProps: function() {
-		var $card = this.$cards.eq(this.c_item);
+	getPageProps: function(index) {
+		var index = (typeof index !== "undefined") ? index : this.c_item;
+		var $card = this.$cards.eq(index);
 		return {
 			title: $card.data('title'),
-			pgSize: $card.data('pgsize') 
+			pgSize: $card.data('pgsize'),
+			titTrack: $card.data('tittrack') 
 		}
 	},
 	setPageProps: function() {
