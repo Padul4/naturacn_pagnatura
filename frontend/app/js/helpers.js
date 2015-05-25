@@ -23,16 +23,6 @@ window.trackAnalytics = function(cat, action, label) {
   console.log(cat, action, label);
 };
 
-$('[data-ga]').click(function(event) {
-  var data = $(this).data('ga').split('|');
-  if (data[3] && data[3] === "waitredirect") {
-    event.preventDefault();
-    trackGARedirect($(this), data[0], data[1], data[2]);
-  } else {
-    trackAnalytics(data[0], data[1], data[2]);
-  }
-});
-
 var pagesViews = [];
 
 window.trackPageviewGA = function (page, title) {
