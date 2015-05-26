@@ -11,5 +11,6 @@ module.exports = {
 	baseUrl: 'http://localhost:3000',
 	assetsUrl: '',
 	extPage: ".html",
-	extAssets: ""
+	extAssets: "",
+	partials: true
 }

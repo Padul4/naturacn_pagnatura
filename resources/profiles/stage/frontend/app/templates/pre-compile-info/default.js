@@ -11,5 +11,6 @@ module.exports = {
 	baseUrl: 'http://natura.reconhecimento.agenciasalve.com.br',
 	assetsUrl: '',
 	extPage: ".html",
-	extAssets: ".min"
+	extAssets: ".min",
+	partials: true
 }

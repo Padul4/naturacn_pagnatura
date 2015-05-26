@@ -11,5 +11,6 @@ module.exports = {
 	baseUrl: 'http://www.natura.com.br/www',
 	assetsUrl: '',
 	extPage: "",
-	extAssets: ".min"
+	extAssets: ".min",
+	partials: false
 }

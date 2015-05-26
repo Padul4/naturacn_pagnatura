@@ -1,5 +1,7 @@
+{{#if partials}}
 {{> head}}
 {{> header}}
+{{/if}}
 
 <!-- bibliotecas js -->
 <script src="{{baseUrl}}/js/vendor.min.js"></script>
@@ -890,5 +892,7 @@ $(document).ready(function($) {
 </script>
 <!-- // scrips da aplicacao -->
 
+{{#if partials}}
 {{> footer}}
 {{> foot}}
+{{/if}}

@@ -8,8 +8,9 @@
 module.exports = {
 	title: "Pagina Salve QA",
 	description: "Natura Reconhecimento Salve QA",
-	baseUrl: 'http://natura.reconhecimento.agenciasalve.com.br',
+	baseUrl: 'http://www.salveinterativa.com.br/natura_voce-conecta',
 	assetsUrl: '',
 	extPage: ".html",
-	extAssets: ".min"
+	extAssets: ".min",
+	partials: true
 }
