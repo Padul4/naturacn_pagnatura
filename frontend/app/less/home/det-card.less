@@ -28,6 +28,25 @@
 				  right: 0;
 			}
 		}
+		.nav-label{
+			background: #f76c03;
+			color: #ffffff;
+			font-size: 13px;
+			font-family: @mainFontBold;
+			position: absolute;
+			display: none;
+			padding: 10px 10px;
+			&.left{
+				top: 40px;
+				left: 100px;
+				.border-radiuses(@bottomright: 5px, @topright: 5px)
+			}
+			&.right{
+				right: 100px;
+				top: 40px;
+				.border-radiuses(@bottomleft: 5px, @topleft: 5px)
+			}
+		}
 	}
 	.card-content{
 		margin: 0 48px;

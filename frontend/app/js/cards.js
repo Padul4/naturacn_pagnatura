@@ -31,12 +31,51 @@ var Cards = {
 	},
 	bind: function() {
 		var _that = this;
+
+		// Right Nav Button
 		this.$btnRight.on('click', function() {
 			_that.next();
 		});
+
+		this.$btnRight.on('mouseover', function() {
+			var target = _that.c_item + 1;
+			if (target >= _that.totalItems) {
+				_that.c_item = _that.totalItems;
+				return false;
+			}
+			var data = _that.getPageProps(target);
+			$('.nav-label.right').append("<p>" + data.title + "</p>");
+			$('.nav-label.right').fadeIn();
+		});
+
+		this.$btnRight.on('mouseout', function() {
+			$('.nav-label.right').fadeOut(function() {
+				$(this).find('p').remove();	
+				});			
+		});
+
+		// Left Nav Button
 		this.$btnLeft.on('click', function() {
 			_that.prev();
 		});
+
+		this.$btnLeft.on('mouseover', function() {
+			var target = _that.c_item - 1;
+			if (target < 0) {
+				_that.c_item = 0;
+				return false;
+			}
+			var data = _that.getPageProps(target);
+			$('.nav-label.left').append("<p>" + data.title + "</p>");
+			$('.nav-label.left').fadeIn();
+		});
+
+		this.$btnLeft.on('mouseout', function() {
+			$('.nav-label.left').fadeOut(function() {
+				$(this).find('p').remove();	
+			});		
+		});
+
 		$('.btn-card-saiba-mais').on('click', function(e) {
 			e.preventDefault();
 			var index = $(this).parents('.card-wrapper').index();
@@ -76,13 +115,14 @@ var Cards = {
 		var value = '-' + this.itemSize * index + 'px';
 		var anima = TweenLite.to(this.$wrap, 1, {x: value});
 		this.c_item = index;
+		_that.setPageProps();
 		anima.eventCallback('onStart', function() {
 			Pr.Youtube.pauseAllVideos();
 		});
+
 		anima.eventCallback('onComplete', function() {
 			_that.setHeight();
 			_that.changeBulet();
-			_that.setPageProps();
 
 			// track
 			var data = _that.getPageProps();
@@ -90,6 +130,23 @@ var Cards = {
 			  'page': '/www/consultoria/apoio-ao-consultor/voce-conecta/light-box/' + data.titTrack,
 			  'title': 'Voce conecta - Light Box - ' + data.title + ' | Natura'
 			});
+			var target = _that.c_item + 1;
+			if (target >= _that.totalItems) {
+				_that.c_item = _that.totalItems;
+				_that.$btnRight.removeClass('icon-stepnext');
+				_that.$btnRight.addClass('icon-stepnext-disabled');
+				return false;
+			}
+			if (target <= 1) {
+				this.c_item = 0;
+				_that.$btnLeft.removeClass('icon-stepback');
+				_that.$btnLeft.addClass('icon-stepback-disabled');
+				return false;
+			}
+			_that.$btnRight.removeClass('icon-stepnext-disabled');
+			_that.$btnLeft.removeClass('icon-stepback-disabled')
+			_that.$btnRight.addClass('icon-stepnext');
+			_that.$btnLeft.addClass('icon-stepback');
 		});
 	},
 	next: function() {
