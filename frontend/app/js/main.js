@@ -8,12 +8,12 @@ var Main = {
   },
   bind: function() {
     var _that = this;
-    $('.pagnatura-modal-box .btn-close').on('click', function() {
+    $('.pagnatura-modal-box .btn-close, .pagnatura-modal-box .btn-nao-aceito').on('click', function() {
       $('#pn-modal').fadeOut(function() {
         $('body').removeClass('modalOpened');
       });
     });
-    $('.pagnatura-faixa-wrapper .pagnatura-cloud .btn-link').on('click', function() {
+    $('.pagnatura-faixa-wrapper .pagnatura-cloud .btn-link, .pagnatura-beneficios .btn-compre-agora, .card-details-1 .btn-compre-agora').on('click', function() {
       $('#pn-modal').fadeIn(function() {
         $('body').addClass('modalOpened');
       });
@@ -38,5 +38,6 @@ $(document).ready(function() {
     $('.btn-simular-option').removeClass('selected');
     $(this).addClass('selected');
   });
+
   
 });

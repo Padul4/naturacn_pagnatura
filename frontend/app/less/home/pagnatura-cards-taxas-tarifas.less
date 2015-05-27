@@ -22,7 +22,7 @@
 			.credito-a-vista-text{
 				margin: 10px 0 10px 0;
 				&.italic{
-					font-family: 'gill_sans_italic';
+					font-family: @mainFontBoldItalic;
 				}
 			}
 			.gray-divider{
@@ -61,14 +61,14 @@
 			}
 			.credito-debito-text{
 				margin: 10px 0 10px 0;
+				&.italic{
+					font-family: @mainFontBoldItalic;
+				}
 			}
 			.gray-divider{
 				display: block;
 			}
 			.bandeira-cartoes{
-				background: url(../img/bandeira-cartoes-debito.png);
-				width: 386px;
-				height: 61px;
 				margin: 0 auto;
 			}
 			.card-details-text{
@@ -195,6 +195,10 @@
 				}
 				
 		}
+	}
+	.simulador-obs{
+		font-family: @mainFontBoldItalic;
+		font-size: 16px;
 	}
 	.spacer-conteudo{
 		margin: 30px 0;

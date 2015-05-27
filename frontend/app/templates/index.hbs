@@ -23,9 +23,9 @@
 				</p>
 				<section class="voce-conecta-label-holder">
 					<section class="label-vc-conecta">
-						<p class="text">
+						<a href="#" class="text">
 							Você_Conect@
-						</p>
+						</a>
 					</section>
 				</section>
 				<section class="pagnatura-maquina"></section>
@@ -109,8 +109,8 @@
 									<p class="card-details-text">
 										Instalar o aplicativo PagNatura para efetuar<br>
 										as transações.<br>
-										<a class="btn-cards-orange" href="#">Clique aqui</a>
-										<a data-ga="Vc_Conecta|Instalar_App|Botao" href="#" class="btn-google-play"></a>
+										<a data-ga="Vc_Conecta|Instalar_App|Botao" class="btn-cards-orange" href="#">Clique aqui</a>
+										<a href="#" class="btn-google-play"></a>
 										<a href="#" class="btn-apple-store"></a>
 									</p>
 								</section>
@@ -142,18 +142,14 @@
 									</p>
 								</section>
 								<section class="card-details-2">
-									<p class="card-details-text">
-										<span class="bold">* Regras de Resgate de Pontos<br></span>
-										<span class="bullet-orange">•</span> Os pontos podem ser trocados por qualquer produto Natura.<br>
-										<span class="bullet-orange">•</span> O vale-pontos estará disponível para resgate até 30 dias após<br> 
-										   a entrega do Leitor PagNatura a você.<br> 
-										<span class="bullet-orange">•</span>  Você poderá resgatar 20 pontos a cada ciclo e terá o prazo<br> 
-										  de1 ano para realizar o resgate.<br>
-										<span class="bullet-orange">•</span> Os pontos são válidos apenas a partir do pedido mínimo, ou seja,<br> 
-										  não são abatidos dos pontos do pedido mínimo do Ciclo.<br>
-										<span class="bullet-orange">•</span> Em caso de cessação (deixar de ser CN), você perde <br>
-										  o direito a eventuais Vale-Pontos pendentes de resgate.<br> 
-									</p>
+									<ul class="card-details-text">
+										<li class="regras-resgate"><span class="bold">* Regras de Resgate de Pontos<br></span></li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> Os pontos podem ser trocados por qualquer produto Natura.<br></li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> O vale-pontos estará disponível para resgate até 30 dias após a entrega do Leitor PagNatura a você.<br></li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> Você poderá resgatar 20 pontos a cada ciclo e terá o prazo de 01 ano para realizar o resgate.<br></li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> Os pontos são válidos apenas a partir do pedido mínimo, ou seja, não são abatidos dos pontos do pedido mínimo do Ciclo.<br></li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> Em caso de cessação (deixar de ser CN), você perde o direito a eventuais Vale-Pontos pendentes de resgate.<br></li>
+									</ul>
 								</section>
 								<section class="card-details-3">
 									<section class="card-details-icon-holder">
@@ -173,8 +169,8 @@
 								<p class="card-text">
 									Assista ao vídeo e entenda <br>
 									como configurar seu novo <br>
-									leitor de cartões e <br>
-									o aplicativo PagNatura.
+									leitor de cartões e o <br>
+									aplicativo PagNatura.
 								</p>
 								<section class="media-holder-video" data-name="video-como-configurar">
 									<!-- Fill via Js -->
@@ -587,7 +583,7 @@
 														<i class="icon-sq-check"></i>
 													</div>
 													<p class="text">
-														Importante: para poder <br />
+														<span class="bold">Importante:</span> para poder <br />
 														efetuar o saque, voc&ecirc; <br />
 														precisa ter configurado  <br />
 														e verificado a sua conta  <br />
@@ -641,9 +637,9 @@
 				
 				<!-- Adiquirir um leitor -->
 				<article class="card-wrapper">
-					<section class="card-content">
+					<section class="card-content leitor">
 						<section class="card-icon-holder">
-							<i class="card-icon icon-gray-smartphone"></i>
+							<i class="card-icon icon-gray-leitor"></i>
 						</section>
 						<h2 class="card-title">Adquirir um leitor</h2>
 						<hr class="spacer">
@@ -728,7 +724,7 @@
 
 				<!-- Gestão de Pagamentos -->
 				<article class="card-wrapper">
-					<section class="card-content">
+					<section class="card-content pagamentos">
 						<section class="card-icon-holder">
 							<i class="card-icon icon-gray-pagamentos"></i>
 						</section>
@@ -782,11 +778,9 @@
 				<i class="icon-red-atendimento"></i>
 				<h2 class="atendimento-title">Central de Atendimento Natura (CAN)</h2>
 				<span class="atendimento-tel">0800-7628872</span>
-				<p class="horario-atendimento">
-					<em>
-						Segunda a sexta das 08h às <br>
-						22h e sábado das 09h às 20h
-					</em>
+				<p class="horario-atendimento italic">
+					Segunda a sexta das 08h às <br>
+					22h e sábado das 09h às 20h
 				</p>
 			</section>
 
@@ -796,7 +790,7 @@
 			<section class="pagnatura-duvidas">
 				<i class="icon-red-duvida"></i>
 				<h2 class="duvidas-title">Dúvidas</h2>
-				<p class="duvidas-text">
+				<p class="duvidas-text italic">
 					Tire suas dúvidas sobre o leitor <br>
 					com o autoatendimento da Natura.
 				</p>	
@@ -824,11 +818,11 @@
 					<div class="box-chip-natura"></div>
 					<h2 class="mais-info-title">Chip Natura</h2>
 					<p class="mais-info-text">				
-						Uma parceria especial com a Claro <br>
-						para deixar você conectado(a) o dia <br>
-						todo: esse chip de celular dá acesso <br>
-						a promoções e vantagens exclusivas <br>
-						para agilizar seu dia a dia de <br>
+						Uma parceria especial com a Claro 
+						para deixar você conectado(a) o dia 
+						todo: esse chip de celular dá acesso 
+						a promoções e vantagens exclusivas 
+						para agilizar seu dia a dia de 
 						Consultor(a) Natura. 
 					</p>
 					<p class="btn-saiba-mais-info">
@@ -841,9 +835,9 @@
 					<div class="box-app-pedidos"></div>
 					<h2 class="mais-info-title">Aplicativo Pedidos Natura</h2>
 					<p class="mais-info-text">				
-						Faça e organize seus pedidos a <br>
-						qualquer hora em qualquer lugar <br>
-						por meio desse aplicativo para <br>
+						Faça e organize seus pedidos a
+						qualquer hora em qualquer lugar
+						por meio desse aplicativo para
 						celular ou tablet.
 					</p>
 					<p class="btn-saiba-mais-info">
