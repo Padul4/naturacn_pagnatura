@@ -1,6 +1,7 @@
 // refazer
 import Cards from './cards';
 
+
 var Main = {
   init: function () {
     Cards.init();
@@ -32,12 +33,29 @@ var Main = {
 $(document).ready(function() {
 	Main.init();
 
+  $('.scroll-pane').jScrollPane();
+  
   // Simular valor button
+
   $('.btn-simular-option').click(function (){
+    var $valorPocentagem = $('.valor-porcentagem');
+    var $valorPocentagemReal= $('.valor-porcentagem.real');
     event.preventDefault();
     $('.btn-simular-option').removeClass('selected');
     $(this).addClass('selected');
+    $valorPocentagem.text($(this).attr('data-porcentagem'));
+    $valorPocentagemReal.text($(this).attr('data-real'));
   });
 
+  // Simular valor button list-of-cards
+  $('.pagnatura-beneficios .btn-saiba-mais').click(function (){
+    event.preventDefault();
+    $('html,body').animate({scrollTop: $('.list-of-cards').offset().top},'slow');
+  });
+
+  $('.btn-imprimir-tabela .btn-print').click(function() {
+    event.preventDefault();
+    window.open($(this).attr('href'), "", "width=1024, height=900");
+  });
   
 });

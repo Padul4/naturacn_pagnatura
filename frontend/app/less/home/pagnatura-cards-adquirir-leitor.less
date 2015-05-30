@@ -2,55 +2,90 @@
 	.card-text{
 		text-align: center;
 	}
-	.card-details-1{
-		width: 415px;
-		height: 180px;
-		float: left;
-		background: #f9f9f9;
-		border: 2px solid #dadada;
-		margin-top: 30px;
+	.combo-holder{
 		overflow: hidden;
-		.card-details-icon-holder{
+		.card-details-1{
+			width: 415px;
+			height: 180px;
 			float: left;
-			margin-top: 17px;
-			margin-right: 20px;
-			height: 132px;
-			margin-left: -10px;
-		}
-		.card-details-text{
-			margin-top: 45px;
-			font-family: @mainFontBold;
-		}
-		.spacer{
-			border: 1px dashed #b0b1b2;
-			margin-right: 30px;
-		}
-		.card-details-info{
-			font-family: @mainFont;
-			.bold{
+			background: #f9f9f9;
+			border: 2px solid #dadada;
+			margin: 11px 11px;
+			overflow: hidden;
+			.card-details-icon-holder{
+				float: left;
+				margin-top: 17px;
+				margin-right: 20px;
+				height: 132px;
+				margin-left: -10px;
+			}
+			.card-details-text{
+				margin-top: 45px;
 				font-family: @mainFontBold;
 			}
-			.small{
-				font-size: 12px;
+			.spacer{
+				border: 1px dashed #b0b1b2;
+				margin-right: 30px;
 			}
-
-			.pontos-natura{
+			.card-details-info{
 				font-family: @mainFont;
-				margin-top: 5px;
-				display: block;
-					&.italic{
-						font-family: @mainFontBoldItalic;
-					}
+				.bold{
+					font-family: @mainFontBold;
+				}
+				.small{
+					font-size: 12px;
+				}
+				.pontos-natura{
+					font-family: @mainFont;
+					margin-top: 5px;
+					display: block;
+						&.italic{
+							font-family: @mainFontBoldItalic;
+						}
+				}
 			}
-		}
-		.btn-compre-agora{
-			margin-top: 10px;
-		}
+			.btn-compre-agora{
+				margin-top: 10px;
+				-webkit-transform: translateZ(0);
+				transform: translateZ(0);
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-transition-duration: 0.3s;
+				transition-duration: 0.3s;
+				-webkit-transition-property: transform;
+				transition-property: transform;
+				-webkit-transition-timing-function: ease-out;
+				transition-timing-function: ease-out;
+			}
+			.btn-compre-agora:hover{
+				-webkit-transform: translateX(8px);
+				transform: translateX(8px);
+			}
+		
+	}
+	}
+	.combo-holder-empty{
+		overflow: hidden;
+			.card-details-empty{
+				.card-content-empty{
+					margin: 70px auto;
+					width: 420px;
+						.icon-red-atencao{
+							margin: 0 auto;
+							width: 48px;	
+							display: block;
+						}
+						.empty-text{
+							margin-top: 15px;
+							color: @red_light;
+						}
+				}
+			}
 	}
 	.card-details-2{
-		width: 416px;
 		height: 150px;
-		margin-left: 37px;
+		margin-left: 13px;
 		float: left;
 		.card-details-icon-holder{
 			float: left;

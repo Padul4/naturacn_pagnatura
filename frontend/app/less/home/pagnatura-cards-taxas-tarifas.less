@@ -123,7 +123,7 @@
 					height: 175px;
 					float: left;
 						.opcoes-holder{
-							width: 200px;
+							width: 210px;
 							margin-top: 37px;
 							margin-left: 80px;
 								.opcoes-text{
@@ -133,25 +133,26 @@
 									margin-bottom: 16px;
 								}		
 								.btn-simular-option{
-									background-color: #fff;
-									color: @red_light;
-									text-decoration: none;
-									.border-radius(10px);
-									width: 42px;
-									padding: 5px 10px;
-									margin-right: 8px;
-									&.a-vista{
-										display: block;
-										text-align: center;
-										width: 190px;
-										text-transform: uppercase;
-										padding: 7px 0px;
-									}
-									&.selected{
-										border: 1px solid #f76c03;
-										background-color: #ffeac9;
-									}
-								}						
+								  background-color: #fff;
+								  color: @red_light;
+								  text-decoration: none;
+								  .border-radius(10px);
+								  width: 38px;
+								  padding: 5px 10px;
+								  margin-right: 8px;
+								  border: 1px solid transparent;
+								  &.a-vista{
+								    display: block;
+								    text-align: center;
+								    width: 195px;
+								    text-transform: uppercase;
+								    padding: 7px 0px;
+								  }
+								  &.selected{
+								    border: 1px solid #f76c03;
+								    background-color: #ffeac9;
+								  }
+								} 			
 						}
 				}
 				.simulador-taxas{
@@ -234,6 +235,11 @@
 			margin-top: 20px;
 			.btn-imprimir-tabela{
 				margin-top: 210px;
+				.box-shadow(0px 1px 3px #9d9d9d);
+				a{
+					padding: 10px 13px;
+					font-size: 15px;
+				}
 			}
 		}
 	}

@@ -48,20 +48,21 @@
 .btn-li-aceito{
 	.setBtn(@white, @red_light, @fontFamily: @mainFont);
 	.btn-link{
-		.inner-shadow(0, -10px, 30px, 1px);
 		.border-radius(10px);
 		border: 2px solid #d7d7d7;
 		font-size: 14px;
 		padding: 9px 17px;
+		.box-shadow(0px 1px 3px #9d9d9d);
+		.gradient (@startColor: #fefefe, @endColor: #dadada)
 	}
 	&:hover{
 		.btn-link{
 			background-color: @white;
+			.gradient (@startColor: #dadada, @endColor: #fefefe)
 		}
 	};
 }
 .btn-compre-agora,
-.btn-imprimir-tabela,
 .btn-saiba-mais-info,
 .btn-nao-aceito{
 	.setBtn(@red_light, @white, @fontFamily: @mainFont);
@@ -71,15 +72,19 @@
 		padding: 9px 17px;
 		border: 1px solid #d95e4a;
 		.transition(all 2s ease-in-out);
-		.gradient (@startColor: #cb4d38, @endColor: #d9604d)
+		.box-shadow(0px 2px 3px #9d9d9d);
+		.gradient (@startColor: #d9604d, @endColor: #cb4d38)
 	}
 	&:hover{
 		.btn-link{
 			.transition(all 2s ease-in-out);
-			.gradient (@startColor: #d9604d, @endColor: #cb4d38);
+			.gradient (@startColor: #cb4d38, @endColor: #d9604d);
 			
 		}
 	};
+}
+.btn-imprimir-tabela{
+
 }
 .btn-google-play{
 	.icon-sprite;
@@ -97,6 +102,7 @@
 	color: @orange;
 	text-decoration: none;
 	text-transform: uppercase;
+
 	&:hover{
 		text-decoration: underline;	
 	};
@@ -127,10 +133,16 @@
 	color: @red_light;
 	text-decoration: none;
 	text-transform: uppercase;
+	.box-shadow(0px 1px 3px #9d9d9d);
 }
-.btn-cadastro{
+.btn-cadastro,
+.btn-imprimir-tabela{
 	.setBtn(#f76c03, @white, @fontFamily: @mainFont);
 	.btn-link{		
-		padding: 0;
+		padding: 5px 7px;
+		.gradient (@startColor: #db5f0a, @endColor: #ee7e38);
+			&:hover{
+				.gradient (@startColor: #ee7e38, @endColor: #db5f0a);
+			}
 	}
 }

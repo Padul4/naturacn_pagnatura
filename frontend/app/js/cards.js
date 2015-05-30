@@ -38,20 +38,33 @@ var Cards = {
 		});
 
 		this.$btnRight.on('mouseover', function() {
+			var $this = $(this);
 			var target = _that.c_item + 1;
 			if (target >= _that.totalItems) {
 				_that.c_item = _that.totalItems;
 				return false;
 			}
 			var data = _that.getPageProps(target);
-			$('.nav-label.right').append("<p>" + data.title + "</p>");
-			$('.nav-label.right').fadeIn();
+			var $label = $('.nav-label.right');
+			if (!$(this).hasClass('mouseout')) {
+				if ($label.find('p').length) {
+					$label.find('p').html(data.title);
+				} else {
+					$label.append("<p>" + data.title + "</p>");
+				}
+				$label.fadeIn("fast", function() {
+					$this.addClass('mouseout');
+				});
+			}
+
 		});
 
 		this.$btnRight.on('mouseout', function() {
-			$('.nav-label.right').fadeOut(function() {
-				$(this).find('p').remove();	
-				});			
+			var $this = $(this);
+			$('.nav-label.right').fadeOut("fast",function() {
+				$(this).find('p').remove();
+				$this.removeClass('mouseout');	
+			});		
 		});
 
 		// Left Nav Button
@@ -60,19 +73,33 @@ var Cards = {
 		});
 
 		this.$btnLeft.on('mouseover', function() {
+			var $this = $(this);
 			var target = _that.c_item - 1;
 			if (target < 0) {
 				_that.c_item = 0;
 				return false;
 			}
 			var data = _that.getPageProps(target);
-			$('.nav-label.left').append("<p>" + data.title + "</p>");
-			$('.nav-label.left').fadeIn();
+			var $label = $('.nav-label.left');
+			if (!$(this).hasClass('mouseout')) {
+				if ($label.find('p').length) {
+					$label.find('p').html(data.title);
+				} else {
+					$label.append("<p>" + data.title + "</p>");
+				}
+				$label.fadeIn("fast", function() {
+					$this.addClass('mouseout');
+				});
+			}
+			//$('.nav-label.left').append("<p>" + data.title + "</p>");
+			//$('.nav-label.left').fadeIn();
 		});
 
 		this.$btnLeft.on('mouseout', function() {
-			$('.nav-label.left').fadeOut(function() {
-				$(this).find('p').remove();	
+			var $this = $(this);
+			$('.nav-label.left').fadeOut("fast",function() {
+				$(this).find('p').remove();
+				$this.removeClass('mouseout');	
 			});		
 		});
 
@@ -80,20 +107,18 @@ var Cards = {
 			e.preventDefault();
 			var index = $(this).parents('.card-wrapper').index();
 			if (_that.isOpened) {
-				_that.goTo(index)
+				_that.goTo(index, 0)
 			} else {
 				_that.$section.addClass('clr-margin');
 				_that.$listCards.fadeOut();
+				_that.goTo(index, 0);
+				_that.setHeight();
 				_that.showContent(index, function() {
 					_that.$father.addClass('actived');
-					_that.setHeight();
-					_that.goTo(index);
 				});
 			}
 		});
-		$('.btn-print').on('click', function(e) {
 
-		})
 		this.$close.on('click', function() {
 			_that.hideContent(function() {
 				_that.clearHeight();
@@ -102,6 +127,7 @@ var Cards = {
 				_that.$listCards.fadeIn();
 			});
 		});
+
 		this.$cdpTab.on('click', function() {
 			var tab = $(this).data('tab');
 			_that.$cdpTab.removeClass('actived');
@@ -110,15 +136,15 @@ var Cards = {
 			ga('send', 'event', 'Vc_Conecta', 'Aba_' + tab, 'Botao');
 		});
 	},
-	goTo: function(index) {
+	goTo: function(index, timing) {
 		var _that = this;
+		var timing = (typeof timing === "number") ? timing : 1;
 		var value = '-' + this.itemSize * index + 'px';
-		var anima = TweenLite.to(this.$wrap, 1, {x: value});
+		var anima = TweenLite.to(this.$wrap, timing, {x: value});
 		this.c_item = index;
 		_that.setPageProps();
 		anima.eventCallback('onStart', function() {
-			Pr.Youtube.pauseAllVideos();
-		});
+			Pr.Youtube.pauseAllVideos(); });
 
 		anima.eventCallback('onComplete', function() {
 			_that.setHeight();
@@ -130,6 +156,7 @@ var Cards = {
 			  'page': '/www/consultoria/apoio-ao-consultor/voce-conecta/light-box/' + data.titTrack,
 			  'title': 'Voce conecta - Light Box - ' + data.title + ' | Natura'
 			});
+
 			var target = _that.c_item + 1;
 			if (target >= _that.totalItems) {
 				_that.c_item = _that.totalItems;
@@ -220,16 +247,22 @@ var Cards = {
 	},
 	showContent: function(index, callback) {
 		var callback = callback || function() {};
-		var anima = TweenLite.to(this.$father, 0.5, {top: '0px'});
-		anima.eventCallback('onComplete', function() {
+		// var anima = TweenLite.to(this.$father, 0.5, {top: '0px'});
+		// anima.eventCallback('onComplete', function() {
+		// 	callback();
+		// });
+		this.$father.fadeIn('slow', function() {
 			callback();
 		});
 	},
 	hideContent: function(callback) {
 		var callback = callback || function() {};
-		var anima = TweenLite.to(this.$father, 0.5, {top: '-2000px'});
-		anima.eventCallback('onComplete', function() {
-			callback();
+		// var anima = TweenLite.to(this.$father, 0.5, {top: '-2000px'});
+		// anima.eventCallback('onComplete', function() {
+		// 	callback();
+		// });
+		this.$father.fadeOut('slow', function() {
+			callback();	
 		});
 	},
 	setHeight: function(size) {
@@ -252,7 +285,7 @@ var Cards = {
 		if (tab == "transferir") {
 			this.setHeight(740);
 		} else {
-			this.setHeight();
+			this.setHeight(1020);
 		}
 		$('.cdp-tab-wrapcont[data-tab="' + tab + '"]').show();
 	}

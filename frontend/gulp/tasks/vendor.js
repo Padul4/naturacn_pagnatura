@@ -23,9 +23,8 @@ gulp.task('vendor', function() {
 	var sources = [
 		'jquery/dist/jquery.js',
 		'greensock/src/uncompressed/TweenLite.js',
-		'greensock/src/uncompressed/plugins/CSSPlugin.js'/*,
-		'greensock/src/uncompressed/plugins/EaselPlugin.js',
-		'greensock/src/uncompressed/easing/EasePack.js'*/
+		'greensock/src/uncompressed/plugins/CSSPlugin.js',
+		'jscrollpane/script/jquery.jscrollpane.js'
 	].map(bowerize);
 
 	var helperFile = path.join(appPath, 'js/helpers.js');
