@@ -8,7 +8,7 @@
 module.exports = {
 	title: "Pagina default",
 	description: "Descricao da pagina",
-	baseUrl: 'http://localhost:3000',
+	baseUrl: 'http://192.168.1.168:3000',
 	assetsUrl: '',
 	extPage: ".html",
 	extAssets: "",

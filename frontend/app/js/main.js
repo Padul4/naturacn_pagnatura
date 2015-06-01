@@ -41,11 +41,12 @@ $(document).ready(function() {
     var $valorPocentagem = $('.valor-porcentagem');
     var $valorPocentagemReal= $('.valor-porcentagem.real');
 
-    e.preventDefault();
+
     $('.btn-simular-option').removeClass('selected');
     $(this).addClass('selected');
     $valorPocentagem.text($(this).attr('data-porcentagem'));
     $valorPocentagemReal.text($(this).attr('data-real'));
+    //return false;
   });
 
   // Simular valor button list-of-cards

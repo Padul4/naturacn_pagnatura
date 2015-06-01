@@ -51,5 +51,5 @@ window.trackGARedirect = function(button, event, action, label) {
       window.self.location = button.attr('href');
     }, 500);
   }
-  // console.log(button, event, action, label);
+  console.log(button, event, action, label);
 };

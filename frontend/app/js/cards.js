@@ -166,10 +166,11 @@ var Cards = {
 		anima.eventCallback('onStart', function() {
 			Pr.Youtube.pauseAllVideos(); });
 
-		anima.eventCallback('onComplete', function() {
+		var pageLoad = function() {
+			_that.c_item = index;
 			_that.setHeight();
 			_that.changeBulet();
-
+			console.log("foi");
 			// track
 			var data = _that.getPageProps();
 			ga('send', 'pageview', {
@@ -194,7 +195,17 @@ var Cards = {
 			_that.$btnLeft.removeClass('icon-stepback-disabled')
 			_that.$btnRight.addClass('icon-stepnext');
 			_that.$btnLeft.addClass('icon-stepback');
+		}
+
+		if(typeof timing === "number"){
+			pageLoad();
+		}
+
+		anima.eventCallback('onComplete', function() {
+			pageLoad();
 		});
+
+
 	},
 	next: function() {
 		var target = this.c_item + 1;
