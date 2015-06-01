@@ -10,15 +10,23 @@ var Main = {
   bind: function() {
     var _that = this;
     $('.pagnatura-modal-box .btn-close, .pagnatura-modal-box .btn-nao-aceito').on('click', function() {
-      $('#pn-modal').fadeOut(function() {
+      $('#pn-modal, #pn-modal-2').fadeOut(function() {
         $('body').removeClass('modalOpened');
       });
     });
+
     $('.pagnatura-faixa-wrapper .pagnatura-cloud .btn-link, .card-details-1 .btn-compre-agora').on('click', function() {
       $('#pn-modal').fadeIn(function() {
         $('body').addClass('modalOpened');
       });
     });
+
+    $('.pagnatura-cloud .btn-cadastro .btn-link').on('click', function() {
+      $('#pn-modal-2').fadeIn(function() {
+        $('body').addClass('modalOpened');
+      });
+    });
+
     $('[data-ga]').click(function(event) {
       var data = $(this).data('ga').split('|');
       if (data[3] && data[3] === "waitredirect") {
@@ -67,11 +75,11 @@ $(document).ready(function() {
         $textHover = $('.text-hover');
 
     $holder.on('mouseover', function() {
-      TweenLite.to($labelConecta, 1, {right: -40, ease:Quad.easeInOut});
-      TweenLite.to($textHover, 1, {alpha:1, ease:Quad.easeInOut});
+      TweenLite.to($labelConecta, 0.5, {right: -40, ease:Quad.easeInOut});
+      TweenLite.to($textHover, 0.5, {alpha:1, ease:Quad.easeInOut});
     });
     $holder.on('mouseout', function() {
-      TweenLite.to($labelConecta, 1, {right: -130, ease:Quad.easeInOut});
+      TweenLite.to($labelConecta, 0.5, {right: -130, ease:Quad.easeInOut});
       TweenLite.to($textHover, 0.5, {alpha:0, ease:Quad.easeInOut});
     });
   }

@@ -1046,11 +1046,11 @@
 													Selecione uma das opções <br>
 													para simular o valor final:
 												</p>
-												<a data-ga="voce-conecta|Simulador_1x|Botao" data-porcentagem="2,99%" data-real="R$97,01" class="btn-simular-option a-vista">à vista</a><br>
-												<a data-ga="voce-conecta|Simulador_2x|Botao" data-porcentagem="5,90%" data-real="R$94,10"class="btn-simular-option selected">2x</a>
-												<a data-ga="voce-conecta|Simulador_3x|Botao" data-porcentagem="6,84%" data-real="R$93,16" class="btn-simular-option">3x</a>
-												<a data-ga="voce-conecta|Simulador_6x|Botao" data-porcentagem="9,60%" data-real="R$90,40" class="btn-simular-option">6x</a>
-												<a data-ga="voce-conecta|Simulador_12x|Botao" data-porcentagem="14,81%" data-real="R$85,19" class="btn-simular-option">12x</a>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-vista" data-porcentagem="2,99%" data-real="R$97,01" class="btn-simular-option a-vista">à vista</a><br>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-2x" data-porcentagem="5,90%" data-real="R$94,10"class="btn-simular-option selected">2x</a>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-3x" data-porcentagem="6,84%" data-real="R$93,16" class="btn-simular-option">3x</a>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-6x" data-porcentagem="9,60%" data-real="R$90,40" class="btn-simular-option">6x</a>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-12x" data-porcentagem="14,81%" data-real="R$85,19" class="btn-simular-option">12x</a>
 											</section>
 										</section>
 
@@ -1627,11 +1627,9 @@
 							<br>
 							<p>1.Aquisição do Chip Natura:</p>
 							<br>
-							<p>1.1.Ao escolher aderir à Oferta PagNatura você será direcionado ao site do PagSeguro para finalizar a adesão. Você autoriza a Natura a repassar ao PagSeguro seus dados cadastrais, a fim de facilitar o processo de abertura de seu cadastro perante ao PagSeguro.</p>
+							<p>1.1.O Chip Natura é comercializado pela Natura, fruto de uma parceria com a Claro. Os serviços de telecomunicações são de responsabilidade exclusiva da Claro e deverão ser contratados diretamente por você junto a tal empresa.</p>
 							<br>
-							<p>.1.2.A adesão à Oferta PagNatura está condicionada à aprovação de seu cadastro pelo PagSeguro, podendo ser negada. Em caso de rejeição do seu cadastro pelo PagSeguro, você poderá sanar a causa da rejeição e aderir à Oferta PagNatura novamente, desde que a mesma ainda esteja disponível.</p>
-							<br>
-							<p>1.3.	Em caso de cessação (deixar de ser CN), você perde direito às taxas exclusivas da Oferta.</p>
+							<p>1.2.Ao adquirir o Chip Natura você está ciente e de acordo que a Claro informará à Natura o CPF e o número de telefone atribuídos ao Chip Natura no momento da ativação dos serviços de telecomunicações, com a finalidade de que a Natura possa enviar SMS com conteúdos de teor comercial e avisos.</p>
 							<br>
 							<p>2.Aquisição do Combo Você Conect@: Chip Natura + Leitor PagSeguro + Vale Pontos</p>
 							<br>
@@ -1664,10 +1662,43 @@
 		</div>
 	</section>
 
+	<!-- Modal Termos de Uso 2 (Clique Aqui e Faça Seu Cadastro) -->
+	<section id="pn-modal-2" class="pagnatura-modal">
+		<div class="pagnatura-modal-box">
+			<div class="icon-close-tr-right btn-close"></div>
+			<div class="modal-holder">
+				<p class="warning-text">
+					<span class="bold">Atenção:</span> Você será redirecionado para um ambiente fora da Natura. Para continuar, você deve ler e aceitar os termos de uso da Natura.
+				</p>
+				<h2 class="termos-title">
+					Termos de uso
+				</h2>
+				<div class="scroll-pane">
+					<div class="termos-de-uso scroll-pane">
+						<p>Condições da Oferta</p>
+						<br>
+						<p>Adesão à Oferta PagNatura</p>
+						<br>
+						<p>1.1.	Ao escolher aderir à Oferta PagNatura você será direcionado ao site do PagSeguro para finalizar a adesão. Você autoriza a Natura a repassar ao PagSeguro seus dados cadastrais, a fim de facilitar o processo de abertura de seu cadastro perante ao PagSeguro.</p>
+						<br>
+						<p>1.2.	A adesão à Oferta PagNatura está condicionada à aprovação de seu cadastro pelo PagSeguro, podendo ser negada. Em caso de rejeição do seu cadastro pelo PagSeguro, você poderá sanar a causa da rejeição e aderir à Oferta PagNatura novamente, desde que a mesma ainda esteja disponível.</p>
+						<br>
+						<p>1.3.	Em caso de cessação (deixar de ser CN), você perde direito às taxas exclusivas da Oferta.</p>
+					</div>
+				</div>
+				<p class="btn-nao-aceito">
+					<a data-ga="voce-conecta|termos_faca-seu-cadastro|nao-aceito" class="btn-link" href="#">Não aceito</a>
+				</p>
+				<p class="btn-li-aceito">
+					<a data-ga="voce-conecta|termos_faca-seu-cadastro|aceito" class="btn-link" href="#">Li e aceito, quero continuar</a>
+				</p>
+			</div>
+		</div>
+	</section>
+
 </section>
 
 <!-- scrips da aplicacao -->
-
 <script type="text/javascript">
 $(document).ready(function($) {
 	loadjs('http://192.168.1.168:3000/js/main.js');
