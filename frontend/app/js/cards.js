@@ -153,7 +153,7 @@ var Cards = {
 			_that.$cdpTab.removeClass('actived');
 			$(this).addClass('actived');
 			_that.changeTab(tab);
-			ga('send', 'event', 'Vc_Conecta', 'Aba_' + tab, 'Botao');
+			trackAnalytics('voce-conecta', 'card_gestao-de-pagamentos', tab);
 		});
 	},
 	goTo: function(index, timing) {
@@ -161,56 +161,55 @@ var Cards = {
 		var timing = (typeof timing === "number") ? timing : 1;
 		var value = '-' + this.itemSize * index + 'px';
 		var anima = TweenLite.to(this.$wrap, timing, {x: value});
+		
 		this.c_item = index;
-		_that.setPageProps();
-		anima.eventCallback('onStart', function() {
-			Pr.Youtube.pauseAllVideos(); });
+		this.setPageProps();
 
 		var pageLoad = function() {
-			_that.c_item = index;
 			_that.setHeight();
 			_that.changeBulet();
-			console.log("foi");
 			// track
 			var data = _that.getPageProps();
 			ga('send', 'pageview', {
-			  'page': '/www/consultoria/apoio-ao-consultor/voce-conecta/light-box/' + data.titTrack,
-			  'title': 'Voce conecta - Light Box - ' + data.title + ' | Natura'
+				'page': '/www/consultoria/apoio-ao-consultor/voce-conecta/card/' + data.titTrack,
+				'title': 'Voce_Conecta - ' + data.title + ' | Natura'
 			});
 
-			var target = _that.c_item + 1;
-			if (target >= _that.totalItems) {
-				_that.c_item = _that.totalItems;
+			if (index == (_that.totalItems-1)) {
 				_that.$btnRight.removeClass('icon-stepnext');
 				_that.$btnRight.addClass('icon-stepnext-disabled');
-				return false;
-			}
-			if (target <= 1) {
-				this.c_item = 0;
+				_that.$btnLeft.removeClass('icon-stepback-disabled')
+				_that.$btnLeft.addClass('icon-stepback');
+			} else if (index == 0) {
 				_that.$btnLeft.removeClass('icon-stepback');
 				_that.$btnLeft.addClass('icon-stepback-disabled');
-				return false;
+				_that.$btnRight.removeClass('icon-stepnext-disabled');
+				_that.$btnRight.addClass('icon-stepnext');
+			} else {
+				_that.$btnRight.removeClass('icon-stepnext-disabled');
+				_that.$btnRight.addClass('icon-stepnext');
+				_that.$btnLeft.removeClass('icon-stepback-disabled')
+				_that.$btnLeft.addClass('icon-stepback');
 			}
-			_that.$btnRight.removeClass('icon-stepnext-disabled');
-			_that.$btnLeft.removeClass('icon-stepback-disabled')
-			_that.$btnRight.addClass('icon-stepnext');
-			_that.$btnLeft.addClass('icon-stepback');
 		}
 
 		if(typeof timing === "number"){
 			pageLoad();
+			return false;
 		}
+
+		anima.eventCallback('onStart', function() {
+			Pr.Youtube.pauseAllVideos(); 
+		});
 
 		anima.eventCallback('onComplete', function() {
 			pageLoad();
 		});
-
-
 	},
 	next: function() {
 		var target = this.c_item + 1;
 		if (target >= this.totalItems) {
-			this.c_item = this.totalItems;
+			this.c_item = (this.totalItems - 1);
 			return false;
 		}
 		var data = this.getPageProps(target);
@@ -265,15 +264,18 @@ var Cards = {
 		});
 
 	    function tagPlayVideo ($p) {
-	      trackAnalytics('pagnatura', $p.data('name'), 'play');
+	      trackAnalytics('voce-conecta', $p.data('name'), 'play');
 	    };
 
 	    function tagProgressVideo ($p, percent) {
-	      trackAnalytics('pagnatura', $p.data('name'), percent.toString());
+	    	if (percent == 50) {
+	    		// console.log('tagProgressVideo: ' + percent.toString());
+	      		trackAnalytics('voce-conecta', $p.data('name'), 'metade');
+	    	}
 	    };
 
 	    function tagEndedVideo ($p) {
-	      trackAnalytics('pagnatura', $p.data('name'), '100');
+	      trackAnalytics('voce-conecta', $p.data('name'), 'completo');
 	    };
 	},
 	showContent: function(index, callback) {

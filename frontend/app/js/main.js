@@ -28,6 +28,8 @@ var Main = {
         trackAnalytics(data[0], data[1], data[2]);
       }
     });
+  },
+  trackScroll: function() {
   }
 };
 

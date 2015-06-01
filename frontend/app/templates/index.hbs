@@ -108,7 +108,7 @@
 									<p class="card-details-text">
 										Ter um celular ou tablet com acesso à internet<br> 
 										3G, 4G ou WiFi.<br>
-										<a data-ga="voce-conecta|Chip|Botao" class="btn-cards-orange" href="#">Não tem? Saiba mais sobre o Chip Natura Pré</a>
+										<a data-ga="voce-conecta|card_como-funciona|chip-natura" class="btn-cards-orange" href="#">Não tem? Saiba mais sobre o Chip Natura Pré</a>
 									</p>
 								</section>
 								<section class="card-details-2">
@@ -133,6 +133,36 @@
 									Conheça as opções disponíveis do leitor de cartão de crédito e débito e aproveite para adquirir já o seu.
 								</p>
 								<section class="combo-holder">
+									<!-- Loop -->
+									<section class="card-details-1">
+										<section class="card-details-icon-holder">
+											<img src="{{baseUrl}}/img/pag-seguro-natura-small.png" alt="">
+										</section>
+										<p class="card-details-text">
+											Leitor + Chip Natura Pré + Vale-pontos
+										</p>
+										<hr class="spacer">
+										<p class="card-details-info">
+											12x 
+											<span class="bold">
+												<span class="small">R$</span> 29,90 = <span class="small">R$</span> 358,80
+												<br>
+											</span>
+											<span class="pontos-natura italic">
+												+ 60 pontos em produtos Natura*
+											</span>
+										</p>
+										<!-- 
+										Ao aplicar o loop, é necessário aplicar o 'nome do kit' no atributo data-ga no valor entre chaves. Remover chaves conforme exemplo abaixo:
+										data-ga="voce-conecta|card_adquirir-um-leitor|compre-agora_Leitor + Chip Natura Pré + Vale-pontos"
+										-->
+										<p class="btn-compre-agora">
+											<a data-ga="voce-conecta|card_adquirir-um-leitor|compre-agora_[nome do kit]" href="#" class="btn-link">Compre agora</a>					
+										</p>
+									</section>
+									<!-- / loop -->
+
+									<!-- remover marcacao -->
 									<section class="card-details-1">
 										<section class="card-details-icon-holder">
 											<img src="{{baseUrl}}/img/pag-seguro-natura-small.png" alt="">
@@ -152,7 +182,7 @@
 											</span>
 										</p>
 										<p class="btn-compre-agora">
-											<a data-ga="voce-conecta|Cadastro_Nao_Possui_Leitor|Botão" href="#" class="btn-link">Compre agora</a>					
+											<a data-ga="voce-conecta|card_adquirir-um-leitor|compre-agora_[nome do kit]" href="#" class="btn-link">Compre agora</a>					
 										</p>
 									</section>
 									<section class="card-details-1">
@@ -174,31 +204,10 @@
 											</span>
 										</p>
 										<p class="btn-compre-agora">
-											<a data-ga="voce-conecta|Cadastro_Nao_Possui_Leitor|Botão" href="#" class="btn-link">Compre agora</a>					
+											<a data-ga="voce-conecta|card_adquirir-um-leitor|compre-agora_[nome do kit]" href="#" class="btn-link">Compre agora</a>					
 										</p>
 									</section>
-									<section class="card-details-1">
-										<section class="card-details-icon-holder">
-											<img src="{{baseUrl}}/img/pag-seguro-natura-small.png" alt="">
-										</section>
-										<p class="card-details-text">
-											Leitor + Chip Natura Pré + Vale-pontos
-										</p>
-										<hr class="spacer">
-										<p class="card-details-info">
-											12x 
-											<span class="bold">
-												<span class="small">R$</span> 29,90 = <span class="small">R$</span> 358,80
-												<br>
-											</span>
-											<span class="pontos-natura italic">
-												+ 60 pontos em produtos Natura*
-											</span>
-										</p>
-										<p class="btn-compre-agora">
-											<a data-ga="voce-conecta|Cadastro_Nao_Possui_Leitor|Botão" href="#" class="btn-link">Compre agora</a>					
-										</p>
-									</section>
+									<!-- / remover marcacao -->
 								</section>
 								<section class="card-details-2">
 									<ul class="card-details-text">
@@ -251,7 +260,7 @@
 						</div> -->
 
 						<!-- Como configurar -->
-						<div class="card-item como-configurar" data-title="Como configurar o leitor" data-pgsize="560" data-tittrack="como-configurar">
+						<div class="card-item como-configurar" data-title="Como Configurar" data-pgsize="560" data-tittrack="como-configurar">
 							<article class="card-content">
 								<p class="card-text">
 									Assista ao vídeo e entenda <br>
@@ -259,7 +268,7 @@
 									leitor de cartões e o <br>
 									aplicativo PagNatura.
 								</p>
-								<section class="media-holder-video" data-name="video-como-configurar">
+								<section class="media-holder-video" data-name="card_como-configurar">
 									<!-- Fill via Js -->
 								</section>
 
@@ -267,7 +276,7 @@
 						</div>
 
 						<!-- Como utilizar -->
-						<div class="card-item como-utilizar" data-title="Como utilizar" data-pgsize="560" data-tittrack="como-utilizar">
+						<div class="card-item como-utilizar" data-title="Como Utilizar" data-pgsize="560" data-tittrack="como-utilizar">
 							<article class="card-content">
 								<p class="card-text">
 									Assista ao vídeo e aprenda <br>
@@ -276,7 +285,7 @@
 									receber pagamentos em <br>
 									débito e crédito. 
 								</p>
-								<section class="media-holder-video" data-name="video-como-utilizar">
+								<section class="media-holder-video" data-name="card_como-utilizar">
 									<!-- Fill via Js -->
 								</section>
 
@@ -284,7 +293,7 @@
 						</div>
 
 						<!-- Taxas e tarifas -->
-						<div class="card-item taxas-tarifas" data-title="Taxas e tarifas" data-pgsize="1500" data-tittrack="taxas-e-tarifas">
+						<div class="card-item taxas-tarifas" data-title="Taxas e Tarifas" data-pgsize="1500" data-tittrack="taxas-e-tarifas">
 							<article class="card-content">
 								<p class="card-text">
 									Sem mensalidades nem taxa de adesão, a parceria Natura-PagSeguro oferece as melhores opções do mercado para a utilização desse <br> tipo de serviço.
@@ -443,7 +452,7 @@
 						</div>
 
 						<!-- Gestão de pagamentos -->
-						<div class="card-item gestao-de-pagamentos" data-title="Gest&atilde;o de pagamentos" data-pgsize="1040" data-tittrack="gestao-de-pagamentos">
+						<div class="card-item gestao-de-pagamentos" data-title="Gestao de pagamentos" data-pgsize="1040" data-tittrack="gestao-de-pagamentos">
 							<article class="card-content">
 								<p class="card-text">
 									A Natura e o Pagseguro prepararam a melhor oferta do mercado para você! Adquira o leitor, baixe o aplicativo PagNatura e comece<br>
@@ -851,7 +860,7 @@
 			</p>
 			<section class="pagnatura-cloud cloud">
 				<p class="btn-cadastro">
-					<a data-ga="voce-conecta|Cadastro_Possui_Leitor|Botao" class="btn-link" href="#">Clique aqui e faça seu cadastro</a>
+					<a data-ga="voce-conecta|corpo|ja-tenho-leitor" class="btn-link" href="#">Clique aqui e faça seu cadastro</a>
 				</p>				
 			</section>
 		</section>
@@ -882,7 +891,7 @@
 					Tire suas dúvidas sobre o leitor <br>
 					com o autoatendimento da Natura.
 				</p>
-				<a data-ga="voce-conecta|Duvida|Botao" class="btn-cards-red" href="#">Clique aqui</a>
+				<a data-ga="voce-conecta|corpo|duvidas" class="btn-cards-red" href="#">Clique aqui</a>
 			</section>
 			
 			<!-- PagNatura Mais informações -->
@@ -914,7 +923,7 @@
 						Consultor(a) Natura. 
 					</p>
 					<p class="btn-saiba-mais-info">
-						<a data-ga="voce-conecta|Chip|Botao" class="btn-link" href="#">Saiba mais</a>
+						<a data-ga="voce-conecta|corpo|chip-natura" class="btn-link" href="#">Saiba mais</a>
 					</p>
 				</article>
 
@@ -928,7 +937,7 @@
 						celular ou tablet.
 					</p>
 					<p class="btn-saiba-mais-info">
-						<a class="btn-link" href="#">Saiba mais</a>
+						<a data-ga="voce-conecta|corpo|app-pedidos" class="btn-link" href="#">Saiba mais</a>
 					</p>
 				</article>
 
