@@ -103,9 +103,13 @@ var Cards = {
 			});		
 		});
 
-		$('.btn-card-saiba-mais').on('click', function(e) {
+		$('.card-wrapper').on('click', function(e) {
 			e.preventDefault();
-			var index = $(this).parents('.card-wrapper').index();
+			var index = $(this).index();
+			
+			// var $href = $(this).find('.card-content').attr('data-href');
+			// trackAnalytics('', + $href + '');
+
 			if (_that.isOpened) {
 				_that.goTo(index, 0)
 			} else {
@@ -114,6 +118,22 @@ var Cards = {
 				_that.goTo(index, 0);
 				_that.setHeight();
 				_that.showContent(index, function() {
+					_that.$father.addClass('actived');
+				});
+			}
+		});
+
+		$('.pagnatura-beneficios .btn-compre-agora').on('click', function(e) {
+			e.preventDefault();
+
+			if (_that.isOpened) {
+				_that.goTo(1, 0)
+			} else {
+				_that.$section.addClass('clr-margin');
+				_that.$listCards.fadeOut();
+				_that.goTo(1, 0);
+				_that.setHeight();
+				_that.showContent(1, function() {
 					_that.$father.addClass('actived');
 				});
 			}

@@ -123,21 +123,47 @@
 	-webkit-transform: translateY(-8px);
 	transform: translateY(-8px);
 }
+.pagnatura-header{
+	.text{
+		color: @white;
+		font-family: @mainFontBold;
+		font-size: 17px;
+		text-decoration: none;
+		display: block;
+		position: absolute;
+		z-index: 1;
+		right: 10px;
+		height: 57px;
+		line-height: 62px;
+	}
+}
+.label-shadow{
+	display: block;
+	position: absolute;
+	right: 0;
+	top: -57px;
+	z-index: 1;
+}
 .voce-conecta-label-holder{
 	display: block;
+	overflow: hidden;
 	float: right;
 	position: absolute;
-	top: -50px;
+	top: -40px;
 	right: 0;
+	cursor: pointer;
 	.label-vc-conecta{
-		.text{
+		position: relative;
+		right: -130px;
+		.text-hover{
 			color: @white;
 			font-family: @mainFontBold;
 			font-size: 17px;
-			margin-top: 37px;
-			margin-left: 52px;
 			text-decoration: none;
-			display: block;
+			opacity: 0;
+			position: absolute;
+			left: 59px;
+			top: 22px;
 		}
 	}
 }
