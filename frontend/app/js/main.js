@@ -72,7 +72,7 @@ $(document).ready(function() {
   });
 
   // Simular valor button list-of-cards
-  $('.pagnatura-beneficios .btn-saiba-mais').click(function (e){
+  $('.pagnatura-beneficios .btn-saiba-mais, .pagnatura-beneficios btn-compre-agora').click(function (e){
     e.preventDefault();
     $('html,body').animate({scrollTop: $('.pagnatura-cards').offset().top},'slow');
   });
