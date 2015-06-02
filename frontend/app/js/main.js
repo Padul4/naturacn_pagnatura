@@ -4,38 +4,54 @@ import Cards from './cards';
 
 var Main = {
   init: function () {
+    var _that = this;
     Cards.init();
     this.bind();
+    $(window).scroll(function() {
+      _that.trackScroll();
+    });;
   },
   bind: function() {
     var _that = this;
-    $('.pagnatura-modal-box .btn-close, .pagnatura-modal-box .btn-nao-aceito').on('click', function() {
+    $('.pagnatura-modal-box .btn-close, .pagnatura-modal-box .btn-nao-aceito').unbind('click').bind('click', function() {
       $('#pn-modal, #pn-modal-2').fadeOut(function() {
         $('body').removeClass('modalOpened');
       });
     });
 
-    $('.card-details-1 .btn-compre-agora .btn-link').on('click', function(e) {
+    $('.card-details-1 .btn-compre-agora .btn-link').unbind('click').bind('click', function(e) {
       e.preventDefault();
       var namekit = $(this).data('namekit');
       trackAnalytics('voce-conecta', 'card_adquirir-um-leitor', 'compre-agora_' + namekit);
       $('#pn-modal').fadeIn(function() {
         trackPageviewGA('/www/consultoria/apoio-ao-consultor/voce-conecta/termos-de-uso/adquirir-um-leitor/' + namekit, 'Voce_Conecta - Termos - Adquirir - ' + namekit + ' | Natura');
+        var $btnNao = $('#pn-modal').find('.btn-nao-aceito .btn-link'),
+            $btnYes = $('#pn-modal').find('.btn-li-aceito .btn-link');
+
         $('body').addClass('modalOpened');
-        $('#pn-modal').find('.btn-nao-aceito .btn-link').data('ga', 'voce-conecta|termos_' + namekit + '|nao-aceito');
-        $('#pn-modal').find('.btn-li-aceito .btn-link').data('ga', 'voce-conecta|termos_' + namekit + '|aceito');
-        _that.bind();
+        var flagHasAttrData = false;
+        if (!$btnYes.attr('data-ga')) {
+          $btnYes.attr('data-ga', 'voce-conecta|termos_' + namekit + '|aceito');
+          flagHasAttrData = true;
+        }
+        if (!$btnNao.attr('data-ga')) {
+          $btnNao.attr('data-ga', 'voce-conecta|termos_' + namekit + '|nao-aceito');
+          flagHasAttrData = true;
+        }
+        if (flagHasAttrData) {
+          _that.bind();
+        }
       });
     });
 
-    $('.pagnatura-cloud .btn-cadastro .btn-link').on('click', function() {
+    $('.pagnatura-cloud .btn-cadastro .btn-link').unbind('click').bind('click', function() {
       $('#pn-modal-2').fadeIn(function() {
         trackPageviewGA('/www/consultoria/apoio-ao-consultor/voce-conecta/termos-de-uso/faca-seu-cadastro', 'Voce_Conecta - Termos - Faca Seu Cadastro | Natura');
         $('body').addClass('modalOpened');
       });
     });
 
-    $('[data-ga]').on('click', function(event) {
+    $('[data-ga]').unbind('clik').bind('click', function(event) {
       var data = $(this).data('ga').split('|');
       if (data[3] && data[3] === "waitredirect") {
         event.preventDefault();
@@ -46,10 +62,41 @@ var Main = {
     });
   },
   trackScroll: function() {
+    var _that = this;
+    if (this.scrollControl) {
+      clearTimeout(this.scrollControl);
+    }
+
+    this.scrollControl = setTimeout(function() {
+      _that.trackScrollBytag();
+    }, 300);
     // $(window).scroll(function() {
     //   var height = $(window).scrollTop();
     //   console.log(height);
     // });
+  },
+  trackScrollBytag: function() {
+    var scrollTop = $(window).scrollTop(),
+        $els = $('[data-trackscroll]');
+
+    if ($els.length) {
+      $.each($els, function() {
+        var y = $(this).offset().top;
+        if ($(this).is(':visible')) {
+          if (scrollTop >= y && scrollTop <= (y + $(this).height())) {
+            var data = $(this).data('trackscroll').split('|');
+            if ($(this).data('trackscrollend')) {
+              var full = (75 / 100) * $(this).height();
+              if (scrollTop >= (y + full)) {
+                trackAnalytics(data[0], data[1], data[2]);
+              }
+            } else {
+              trackAnalytics(data[0], data[1], data[2]);
+            }
+          }
+        }
+      });
+    }
   }
 };
 
@@ -59,7 +106,7 @@ $(document).ready(function() {
   $('.scrollpane').jScrollPane();
   
   // Simular valor button
-  $('.btn-simular-option').click(function (e){
+  $('.btn-simular-option').on('click', function (e){
     var $valorPocentagem = $('.valor-porcentagem');
     var $valorPocentagemReal= $('.valor-porcentagem.real');
 
@@ -72,7 +119,7 @@ $(document).ready(function() {
   });
 
   // Simular valor button list-of-cards
-  $('.pagnatura-beneficios .btn-saiba-mais').click(function (e){
+  $('.pagnatura-beneficios .btn-saiba-mais').on('click', function (e){
     e.preventDefault();
     $('html,body').animate({scrollTop: $('.pagnatura-cards').offset().top},'slow');
   });
