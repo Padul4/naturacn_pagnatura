@@ -20,9 +20,7 @@ Após a instalação do node é necessário instalar o [bower](http://bower.io/)
 
 
 ```
-#!$
-
-npm install -g bower
+#!$ npm install -g bower
 ```
 
 A instalação do bower utilizando o comando acima irá se tornar global, ou seja, não será necessário 
@@ -32,9 +30,7 @@ Com o bower instalado é necessário instalar as dependências. Execute o comand
 
 
 ```
-#!$
-
-bower install
+$ bower install
 ```
 
 Esse comando irá procurar um arquivo chamado **bower.json** e baixará todas as dependências que estiverem setadas nele. 
@@ -46,10 +42,55 @@ Um diretório chamado *bower_components* será criado na raiz da aplicação. Qu
 Também será necessário instalar o [Gulp](http://gulpjs.com/). Ele é um automatizador de tarefas como compilação de arquivos de estilo (less, sass, etc), compressão de imagens, templates, javascript, etc. Execute o comando abaixo para instalar o gulp globalmente.
 
 ```
-#!$
-
-npm install -g gulp
+$ npm install -g gulp
 ```
 
+### Tarefas ###
 
+O projeto utiliza algumas tarefas para compilar os arquivos. Segue a lista das tarefas importantes para o desenvolvimento:
+
+#### gulp
+```
+$ gulp
+```
+
+Roda todos os scripts, vendor, css e sobre um servidor local para desenvolvimento
+
+
+#### css
+```
+$ gulp less
+```
+Compila o CSS do projeto e joga o arquivo compilado na pasta `public/css`.
+
+
+#### javascript
+```
+$ gulp scripts
+```
+Compila o javascript do projeto e joga o arquivo compilado na pasta `public/js`.
+
+#### htmls
+```
+$ gulp templates
+```
+Compila o html do projeto para desenvolvimento local e joga o arquivo compilado na pasta `public/js`.
+
+
+```
+$ gulp templates:salveqa
+```
+Compila o html do projeto o ambiente salveqa. Ele busca o arquivo de configuração na pasta `resources/profiles/salveqa/frontend/app/templates/pre-compile-info/default.js`, altera os caminhos das requsições dos arquivos o HTML e joga o arquivo compilado na pasta `resources/profiles/salveqa/frontend/public/`.
+
+
+```
+$ gulp templates:stage
+```
+Compila o html do projeto o ambiente stage. Ele busca o arquivo de configuração na pasta `resources/profiles/stage/frontend/app/templates/pre-compile-info/default.js`, altera os caminhos das requsições dos arquivos o HTML e joga o arquivo compilado na pasta `resources/profiles/stage/frontend/public/`.
+
+
+```
+$ gulp templates:prod
+```
+Compila o html do projeto o ambiente prod. Ele busca o arquivo de configuração na pasta `resources/profiles/prod/frontend/app/templates/pre-compile-info/default.js`, altera os caminhos das requsições dos arquivos o HTML e joga o arquivo compilado na pasta `resources/profiles/prod/frontend/public/`.
 
