@@ -826,10 +826,12 @@
 											</span>
 										</p>
 										<!-- 
-										Ao aplicar o loop, é necessário aplicar o 'nome do kit' no atributo data-namekit.
+										Ao aplicar o loop, é necessário aplicar o 'nome do kit' no atributo data-namekit para ser usado o tagueamento.
+										Aplicar o valor do idmodal para abrir corretamente o box com os termos de uso
 										-->
 										<p class="btn-compre-agora">
-											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos">Compre agora</a>					
+											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos"
+											data-idmodal="1">Compre agora</a>					
 										</p>
 									</section>
 									<!-- / loop -->
@@ -854,7 +856,8 @@
 											</span>
 										</p>
 										<p class="btn-compre-agora">
-											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos">Compre agora</a>					
+											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos"
+											data-idmodal="1">Compre agora</a>					
 										</p>
 									</section>
 									<section class="card-details-1">
@@ -876,7 +879,8 @@
 											</span>
 										</p>
 										<p class="btn-compre-agora">
-											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos">Compre agora</a>					
+											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos"
+											data-idmodal="1">Compre agora</a>					
 										</p>
 									</section>
 									<!-- / remover marcacao -->
@@ -1619,7 +1623,15 @@
 	</section>
 	
 	<!-- Modal Termos de Uso -->
-	<section id="pn-modal" class="pagnatura-modal">
+	<!-- 
+	loop modal termos adiquirir um leitor 
+	Ele utiliza o ID setado no atributo data-idmodal do elemento.
+	O valor setado nesse atributo vai buscar o ID no padrao: pn-modal- 
+	Ex.: 
+	<section id="pn-modal-1" class="pagnatura-modal">...</<section>
+	<section id="pn-modal-2" class="pagnatura-modal">...</<section>
+	-->
+	<section id="pn-modal-1" class="pagnatura-modal">
 		<div class="pagnatura-modal-box">
 			<div class="icon-close-tr-right btn-close"></div>
 			<div class="modal-holder">
@@ -1669,9 +1681,10 @@
 			</div>
 		</div>
 	</section>
+	<!-- / loop modal termos adiquirir um leitor -->
 
 	<!-- Modal Termos de Uso 2 (Clique Aqui e Faça Seu Cadastro) -->
-	<section id="pn-modal-2" class="pagnatura-modal">
+	<section id="pn-modal-cloud" class="pagnatura-modal">
 		<div class="pagnatura-modal-box">
 			<div class="icon-close-tr-right btn-close"></div>
 			<div class="modal-holder">

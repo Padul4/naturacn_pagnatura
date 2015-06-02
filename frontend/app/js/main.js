@@ -14,19 +14,22 @@ var Main = {
   bind: function() {
     var _that = this;
     $('.pagnatura-modal-box .btn-close, .pagnatura-modal-box .btn-nao-aceito').unbind('click').bind('click', function() {
-      $('#pn-modal, #pn-modal-2').fadeOut(function() {
+      $('.pagnatura-modal').fadeOut(function() {
         $('body').removeClass('modalOpened');
       });
     });
 
     $('.card-details-1 .btn-compre-agora .btn-link').unbind('click').bind('click', function(e) {
       e.preventDefault();
-      var namekit = $(this).data('namekit');
+      var namekit = Helper.strings.formatSlug($(this).data('namekit')),
+          idModal = $(this).data('idmodal'),
+          $modal = $('#pn-modal-' + idModal);
+
       trackAnalytics('voce-conecta', 'card_adquirir-um-leitor', 'compre-agora_' + namekit);
-      $('#pn-modal').fadeIn(function() {
+      $modal.fadeIn(function() {
         trackPageviewGA('/www/consultoria/apoio-ao-consultor/voce-conecta/termos-de-uso/adquirir-um-leitor/' + namekit, 'Voce_Conecta - Termos - Adquirir - ' + namekit + ' | Natura');
-        var $btnNao = $('#pn-modal').find('.btn-nao-aceito .btn-link'),
-            $btnYes = $('#pn-modal').find('.btn-li-aceito .btn-link');
+        var $btnNao = $modal.find('.btn-nao-aceito .btn-link'),
+            $btnYes = $modal.find('.btn-li-aceito .btn-link');
 
         $('body').addClass('modalOpened');
         var flagHasAttrData = false;
@@ -45,20 +48,20 @@ var Main = {
     });
 
     $('.pagnatura-cloud .btn-cadastro .btn-link').unbind('click').bind('click', function() {
-      $('#pn-modal-2').fadeIn(function() {
+      $('#pn-modal-cloud').fadeIn(function() {
         trackPageviewGA('/www/consultoria/apoio-ao-consultor/voce-conecta/termos-de-uso/faca-seu-cadastro', 'Voce_Conecta - Termos - Faca Seu Cadastro | Natura');
         $('body').addClass('modalOpened');
       });
     });
 
     $('[data-ga]').unbind('clik').bind('click', function(event) {
-      var data = $(this).data('ga').split('|');
-      if (data[3] && data[3] === "waitredirect") {
-        event.preventDefault();
-        trackGARedirect($(this), data[0], data[1], data[2]);
-      } else {
-        trackAnalytics(data[0], data[1], data[2]);
-      }
+        var data = $(this).data('ga').split('|');
+        if (data[3] && data[3] === "waitredirect") {
+          event.preventDefault();
+          trackGARedirect($(this), data[0], data[1], data[2]);
+        } else {
+          trackAnalytics(data[0], data[1], data[2]);
+        }
     });
   },
   trackScroll: function() {
@@ -70,10 +73,6 @@ var Main = {
     this.scrollControl = setTimeout(function() {
       _that.trackScrollBytag();
     }, 300);
-    // $(window).scroll(function() {
-    //   var height = $(window).scrollTop();
-    //   console.log(height);
-    // });
   },
   trackScrollBytag: function() {
     var scrollTop = $(window).scrollTop(),

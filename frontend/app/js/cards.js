@@ -56,7 +56,6 @@ var Cards = {
 					$this.addClass('mouseout');
 				});
 			}
-
 		});
 
 		this.$btnRight.on('mouseout', function() {
@@ -105,21 +104,23 @@ var Cards = {
 
 		$('.card-wrapper').on('click', function(e) {
 			e.preventDefault();
-			var index = $(this).index();
+			var index = $(this).index(),
+				$this = $(this);
 			
-			// var $href = $(this).find('.card-content').attr('data-href');
-			// trackAnalytics('', + $href + '');
-
-			if (_that.isOpened) {
-				_that.goTo(index, 0)
-			} else {
-				_that.$section.addClass('clr-margin');
-				_that.$listCards.fadeOut();
-				_that.goTo(index, 0);
-				_that.setHeight();
-				_that.showContent(index, function() {
-					_that.$father.addClass('actived');
-				});
+			if (!$this.hasClass('blocked')) {
+				$this.addClass('blocked');
+				if (_that.isOpened) {
+					_that.goTo(index, 0)
+				} else {
+					_that.$section.addClass('clr-margin');
+					_that.$listCards.fadeOut();
+					_that.goTo(index, 0);
+					_that.setHeight();
+					_that.showContent(index, function() {
+						$this.removeClass('blocked');
+						_that.$father.addClass('actived');
+					});
+				}
 			}
 		});
 
@@ -212,8 +213,6 @@ var Cards = {
 			this.c_item = (this.totalItems - 1);
 			return false;
 		}
-		var data = this.getPageProps(target);
-		ga('send', 'event', 'Vc_Conecta', data.titTrack, 'Botao');
 		this.goTo(target);
 	},
 	prev: function() {
@@ -222,8 +221,6 @@ var Cards = {
 			this.c_item = 0;
 			return false;
 		}
-		var data = this.getPageProps(target);
-		ga('send', 'event', 'Vc_Conecta', data.titTrack, 'Botao');
 		this.goTo(target);	
 	},
 	changeBulet: function() {
@@ -280,20 +277,12 @@ var Cards = {
 	},
 	showContent: function(index, callback) {
 		var callback = callback || function() {};
-		// var anima = TweenLite.to(this.$father, 0.5, {top: '0px'});
-		// anima.eventCallback('onComplete', function() {
-		// 	callback();
-		// });
 		this.$father.fadeIn('slow', function() {
 			callback();
 		});
 	},
 	hideContent: function(callback) {
 		var callback = callback || function() {};
-		// var anima = TweenLite.to(this.$father, 0.5, {top: '-2000px'});
-		// anima.eventCallback('onComplete', function() {
-		// 	callback();
-		// });
 		this.$father.fadeOut('slow', function() {
 			callback();	
 		});
