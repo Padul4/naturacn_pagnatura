@@ -676,12 +676,12 @@
 		</div>
 		<div class="dynamic-html5">
 
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/pagnatura.css">
 
 <!-- bibliotecas js -->
 <script src="http://localhost:3000/js/vendor.min.js"></script>
 <!-- // bibliotecas js -->
-<section id="voceconecta-page">
+<section id="pagnatura-page">
 
 	<!-- Header -->
 	<section class="pagnatura-header-wrapper">
@@ -690,47 +690,904 @@
 		<section class="pagnatura-header-content">		
 
 			<section class="pagnatura-header">
-				<h1 class="header-title">Você Conecta</h1>
+				<h1 class="header-title">PagNatura <span class="mini-divider"></span><span class="leitor">Leitor de cartões</span></h1>
 				<p class="header-intro">
-					Ofereça mais opções de pagamento, organize suas vendas direto <br>
-					do seu tablet ou celular e fique sempre conectado(a).
+					Agora você tem a opção de receber os pagamentos <br>
+					com cartão de crédito e débito de forma rápida e segura. <br>
+					<span class="bold">Adquira seu leitor de cartões e faça ótimas vendas!</span>
 				</p>
-				<p class="header-intro">
-					Chegou o Você Conecta um trio de ferramentas que vão facilitar <br>
-					o dia a dia da consultoria e transformarão a sua relação com a <br>
-					Natura e seus clientes.
-				</p>
-				<hr class="spacer">
-				<section class="media-holder-video" data-name="video-home">
-					<!-- Fill via Js -->
+				<div class="label-shadow"></div>
+				<section class="voce-conecta-label-holder">
+					<a data-ga="voce-conecta|header|seta" href="#" class="text">Você_Conect@</a>
+					<section class="label-vc-conecta">
+						<span class="text-hover">Entenda o</span>
+					</section>
 				</section>
-				<p class="btn-saiba-mais">
-					<a data-ga="voce-conecta|header|saiba-mais" href="#" class="btn-link">Saiba mais</a>
-				</p>
+				<section class="pagnatura-maquina"></section>
 			</section>
+
+			<section class="pagnatura-beneficios">
+				<h2 class="beneficios-title">
+					Conheça os benefícios
+				</h2>
+					<hr class="spacer">
+					<img class="leitor-pag-natura" src="http://localhost:3000/img/pag-seguro-natura-big.png" alt="">
+				<ul class="beneficios-list">
+					<li class="list-itens">
+						<i class="icon-beneficios-pagamento"></i>
+						<p class="beneficios-text">Mais formas <br>de pagamento</p>
+					</li>
+					<li class="list-itens">
+						<i class="icon-beneficios-vendas"></i>
+						<p class="beneficios-text">Mais agilidade <br>para as suas vendas</p>
+					</li>
+					<li class="list-itens">
+						<i class="icon-beneficios-leitor"></i>
+						<p class="beneficios-text">Você pode comprar<br> seu próprio leitor</p>
+					</li>
+					<li class="list-itens">
+						<i class="icon-beneficios-2x"></i>
+						<p class="beneficios-text">Você vende<br> parcelado e recebe<br> de uma única vez</p>
+					</li>
+					<li class="list-itens">
+						<i class="icon-beneficios-clientes"></i>
+						<p class="beneficios-text">Mais conveniência<br> para seus clientes</p>
+					</li>
+				</ul>
+				<p class="btn-saiba-mais">
+					<a data-ga="voce-conecta|header|saiba-mais" href="#" class="btn-link">Saiba mais sobre o leitor</a>
+				</p>
+				<p class="btn-compre-agora">
+					<a data-ga="voce-conecta|header|compre-agora" href="#" class="btn-link">Compre agora</a>					
+				</p>
+			</section>			
+
 		</section>
 
+		<!-- Cards -->
+		<section class="pagnatura-cards">
 
+			<div class="card-det">
+				<div class="icon-close-tr-right btn-close"></div>
+				<header class="card-header">
+					<div class="btn-arrow left icon-stepback"></div>
+					<div class="btn-arrow right icon-stepnext"></div>
+
+					<div class="nav-label left">
+						<!-- Fill via JS -->
+					</div>
+
+					<div class="nav-label right">
+						<!-- Fill via JS -->
+					</div>
+
+					<div class="hd-content">
+						titulo da sessao
+					</div>
+				</header>
+				<div class="card-det-viewport">
+					<div class="card-det-wrap">
+
+						<!-- Como funciona -->
+						<div class="card-item como-funciona" data-title="Como funciona" data-pgsize="420" data-tittrack="como-funciona">
+							<article class="card-content">
+								<p class="card-text">
+									O leitor de cartão é conectado junto com o aplicativo PagNatura para celular ou tablet via Bluetooth (um tipo de conexão sem fio <br>
+									comum em quase todos os celulares), tornando possível a leitura do cartão. É fácil e seguro! <br>
+									<span class="voce-precisa">Você precisa:</span>									
+								</p>
+								<section class="card-details-1">
+									<section class="card-details-icon-holder">
+										<i class="icon-gray-wifi"></i>
+									</section>
+									<p class="card-details-text">
+										Ter um celular ou tablet com acesso à internet<br> 
+										3G, 4G ou WiFi.<br>
+										<a data-ga="voce-conecta|card_como-funciona|chip-natura" class="btn-cards-orange" href="#">Não tem? Saiba mais sobre o Chip Natura Pré</a>
+									</p>
+								</section>
+								<section class="card-details-2">
+									<section class="card-details-icon-holder">
+										<i class="icon-gray-smartphone"></i>
+									</section>
+									<p class="card-details-text">
+										Instalar o aplicativo PagNatura para efetuar<br>
+										as transações.<br>
+										<!-- <a data-ga="voce-conecta|Instalar_App|Botao" class="btn-cards-orange" href="#">Clique aqui</a> -->
+										<a href="#" class="btn-google-play"></a>
+										<a href="#" class="btn-apple-store"></a>
+									</p>
+								</section>
+							</article>
+						</div>
+
+						<!-- Adquirir um leitor (FULL) -->
+						<div class="card-item leitor" data-title="Adquirir um leitor" data-pgsize="900" data-tittrack="adquirir-um-leitor">
+							<article class="card-content">
+								<p class="card-text">
+									Conheça as opções disponíveis do leitor de cartão de crédito e débito e aproveite para adquirir já o seu.
+								</p>
+								<section class="combo-holder">
+									<!-- Loop -->
+									<section class="card-details-1">
+										<section class="card-details-icon-holder">
+											<img src="http://localhost:3000/img/pag-seguro-natura-small.png" alt="">
+										</section>
+										<p class="card-details-text">
+											Leitor + Chip Natura Pré + Vale-pontos
+										</p>
+										<hr class="spacer">
+										<p class="card-details-info">
+											12x 
+											<span class="bold">
+												<span class="small">R$</span> 29,90 = <span class="small">R$</span> 358,80
+												<br>
+											</span>
+											<span class="pontos-natura italic">
+												+ 60 pontos em produtos Natura*
+											</span>
+										</p>
+										<!-- 
+										Ao aplicar o loop, é necessário aplicar o 'nome do kit' no atributo data-namekit para ser usado o tagueamento.
+										Aplicar o valor do idmodal para abrir corretamente o box com os termos de uso
+										-->
+										<p class="btn-compre-agora">
+											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos"
+											data-idmodal="1">Compre agora</a>					
+										</p>
+									</section>
+									<!-- / loop -->
+
+									<!-- remover marcacao -->
+									<section class="card-details-1">
+										<section class="card-details-icon-holder">
+											<img src="http://localhost:3000/img/pag-seguro-natura-small.png" alt="">
+										</section>
+										<p class="card-details-text">
+											Leitor + Chip Natura Pré + Vale-pontos
+										</p>
+										<hr class="spacer">
+										<p class="card-details-info">
+											12x 
+											<span class="bold">
+												<span class="small">R$</span> 29,90 = <span class="small">R$</span> 358,80
+												<br>
+											</span>
+											<span class="pontos-natura italic">
+												+ 60 pontos em produtos Natura*
+											</span>
+										</p>
+										<p class="btn-compre-agora">
+											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos"
+											data-idmodal="1">Compre agora</a>					
+										</p>
+									</section>
+									<section class="card-details-1">
+										<section class="card-details-icon-holder">
+											<img src="http://localhost:3000/img/pag-seguro-natura-small.png" alt="">
+										</section>
+										<p class="card-details-text">
+											Leitor + Chip Natura Pré + Vale-pontos
+										</p>
+										<hr class="spacer">
+										<p class="card-details-info">
+											12x 
+											<span class="bold">
+												<span class="small">R$</span> 29,90 = <span class="small">R$</span> 358,80
+												<br>
+											</span>
+											<span class="pontos-natura italic">
+												+ 60 pontos em produtos Natura*
+											</span>
+										</p>
+										<p class="btn-compre-agora">
+											<a href="#" class="btn-link" data-namekit="Leitor + Chip Natura Pré + Vale-pontos"
+											data-idmodal="1">Compre agora</a>					
+										</p>
+									</section>
+									<!-- / remover marcacao -->
+								</section>
+								<section class="card-details-2">
+									<ul class="card-details-text">
+										<li class="regras-resgate"><span class="bold">* Regras de Resgate de Pontos</span></li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> Os pontos podem ser trocados por qualquer produto Natura.</li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> O vale-pontos estará disponível para resgate até 30 dias após a entrega do Leitor PagNatura a você.</li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> Você poderá resgatar 20 pontos a cada ciclo e terá o prazo de 01 ano para realizar o resgate.</li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> Os pontos são válidos apenas a partir do pedido mínimo, ou seja, não são abatidos dos pontos do pedido mínimo do ciclo.</li>
+										<li class="regras-resgate"><span class="bullet-orange">•</span> Em caso de cessação (deixar de ser CN), você perde o direito a eventuais vale-pontos pendentes de resgate.</li>
+									</ul>
+								</section>
+								<section class="card-details-3">
+									<section class="card-details-icon-holder">
+										<i class="icon-red-transporte"></i>
+									</section>
+									<p class="card-details-text">
+										<span class="bold">Entrega do leitor</span><br>
+										Você recebe o leitor em casa até 10 dias úteis a partir da data de pagamento.  O responsável pela entrega é o PagSeguro.
+									</p>
+								</section>
+							</article>
+						</div>
+						
+						<!-- Adquirir um leitor (EMPTY) -->
+						<!-- <div class="card-item leitor" data-title="Adquirir um leitor" data-pgsize="550" data-tittrack="adquirir-um-leitor">
+							<article class="card-content">
+								<p class="card-text">
+									Conheça as opções disponíveis do leitor de cartão de crédito e débito e aproveite para adquirir já o seu.
+								</p>
+								<section class="combo-holder-empty">
+									<section class="card-details-empty">
+										<section class="card-content-empty">
+											<i class="icon-red-atencao"></i>
+											<p class="empty-text">
+												Nenhuma opção disponível no momento. Aguarde atualizações. 
+											</p>
+										</section>
+									</section>
+								</section>
+								<section class="card-details-3">
+									<section class="card-details-icon-holder">
+										<i class="icon-red-transporte"></i>
+									</section>
+									<p class="card-details-text">
+										<span class="bold">Entrega do leitor</span><br>
+										Você recebe o leitor em casa, até 10 dias úteis a partir da data de pagamento.  O responsável pela entrega é o PagSeguro.
+									</p>
+								</section>
+							</article>
+						</div> -->
+
+						<!-- Como configurar -->
+						<div class="card-item como-configurar" data-title="Como Configurar" data-pgsize="560" data-tittrack="como-configurar">
+							<article class="card-content">
+								<p class="card-text">
+									Assista ao vídeo e entenda <br>
+									como configurar seu novo <br>
+									leitor de cartões e o <br>
+									aplicativo PagNatura.
+								</p>
+								<section class="media-holder-video" data-name="card_como-configurar">
+									<!-- Fill via Js -->
+								</section>
+
+							</article>
+						</div>
+
+						<!-- Como utilizar -->
+						<div class="card-item como-utilizar" data-title="Como Utilizar" data-pgsize="560" data-tittrack="como-utilizar">
+							<article class="card-content">
+								<p class="card-text">
+									Assista ao vídeo e aprenda <br>
+									como utilizar o PagNatura <br>
+									no seu dia a dia para <br>
+									receber pagamentos em <br>
+									débito e crédito. 
+								</p>
+								<section class="media-holder-video" data-name="card_como-utilizar">
+									<!-- Fill via Js -->
+								</section>
+
+							</article>
+						</div>
+
+						<!-- Taxas e tarifas -->
+						<div class="card-item taxas-tarifas" data-title="Taxas e Tarifas" data-pgsize="1500" data-tittrack="taxas-e-tarifas">
+							<article class="card-content">
+								<p class="card-text">
+									Sem mensalidades nem taxa de adesão, a parceria Natura-PagSeguro oferece as melhores opções do mercado para a utilização desse <br> tipo de serviço.
+									É só adquirir o leitor, baixar o aplicativo e começar a usar.
+								</p>
+								
+								<section class="cartoes">
+									
+									<section class="card-details-1">
+										<p class="credito-a-vista">
+											Para vendas feitas no CRÉDITO À VISTA
+										</p>
+										<hr class="spacer">
+										<p class="credito-a-vista-text">
+											Você recebe em <span class="bold">30 dias</span><br>
+										</p>
+										<div class="gray-divider"></div>
+										<p class="credito-a-vista-text">
+											Sujeito a taxas* de <span class="bold">2,99%</span><br>
+										</p>
+										<div class="gray-divider"></div>
+										<p class="credito-a-vista-text">
+											Aceita as principais bandeiras do mercado:
+											<section class="icons-cartao-avista"></section>
+										</p>
+										<p class="credito-a-vista-text italic">
+											* Taxas cobradas por transação.
+										</p>
+									</section>
+
+									<section class="card-details-2">
+										<p class="credito-debito">
+											Para vendas feitas no DÉBITO
+										</p>
+										<hr class="spacer">
+										<p class="credito-debito-text">
+											Você recebe em <span class="bold">01 dia</span><br>
+										</p>
+										<div class="gray-divider"></div>
+										<p class="credito-debito-text">
+											Sujeito a taxas* de <span class="bold">2,19%</span><br>
+										</p>
+										<div class="gray-divider"></div>
+										<p class="credito-debito-text">
+											Aceita as principais bandeiras do mercado:
+											<section class="icons-cartao-debito"></section>
+										</p>
+										<p class="credito-debito-text italic">
+											* Taxas cobradas por transação.
+										</p>
+									</section>
+								</section>
+
+								<p class="cartoes-obs">
+									*Parceria comercial entre Natura e UOL/PagSeguro
+								</p>
+
+								<hr class="spacer-conteudo">
+
+								<section class="simulador-natura">
+									<h2 class="simulador-title">
+										Simulador
+									</h2>
+									<p class="simulador-text">
+										Você pode oferecer aos seus clientes a opção de parcelamento em até 12 vezes no cartão de crédito e receber todo o dinheiro de <br>
+										uma única vez. Simule uma venda e veja o valor que será cobrado do seu cliente e o valor que você irá receber.
+									</p>
+									<section class="simulador-content">
+										
+										<!-- Valor considerado -->
+										<section class="valor-considerado">
+											<p class="valor-considerado-text">
+												Considerando uma venda <br>
+												no cartão de crédito, <br>
+												no valor de:
+											</p>
+											<p class="valor-considerado-quantia">
+												R$ 100
+											</p>
+										</section>
+
+										<!-- Opçoes -->
+										<section class="simulador-opcoes big-red-arrow">
+											<section class="opcoes-holder">
+												<p class="opcoes-text">
+													Selecione uma das opções <br>
+													para simular o valor final:
+												</p>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-vista" data-porcentagem="2,99%" data-real="R$97,01" class="btn-simular-option a-vista">à vista</a><br>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-2x" data-porcentagem="5,90%" data-real="R$94,10"class="btn-simular-option selected">2x</a>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-3x" data-porcentagem="6,84%" data-real="R$93,16" class="btn-simular-option">3x</a>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-6x" data-porcentagem="9,60%" data-real="R$90,40" class="btn-simular-option">6x</a>
+												<a data-ga="voce-conecta|card_taxas-tarifas|simulador-12x" data-porcentagem="14,81%" data-real="R$85,19" class="btn-simular-option">12x</a>
+											</section>
+										</section>
+
+										<!-- Taxas -->
+										<section class="simulador-taxas">
+											<section class="taxa-porcentagem">
+												<p class="taxa-porcentagem-text">
+													Considerar <br>
+													taxa de
+												</p>
+												<p class="valor-porcentagem">
+													5,90%
+												</p>
+												<p class="taxa-porcentagem-text">
+													por transação
+												</p>
+											</section>
+
+											<div class="spacer-vertical-bar"></div>
+
+											<section class="taxa-real">
+												<p class="taxa-porcentagem-text">
+													Considerar <br>
+													taxa de
+												</p>
+												<p class="valor-porcentagem real">
+													R$ 94,10
+												</p>
+												<p class="taxa-porcentagem-text">
+													por transação
+												</p>
+												
+											</section>
+										</section>
+
+									</section>
+								</section>
+
+								<p class="simulador-obs">
+									*O PagSeguro antecipa o pagamento das parcelas para você.
+								</p>
+								<hr class="spacer-conteudo">
+
+								<article class="parcelamento">
+									<h2 class="parcelamento-title">
+										Parcelamento
+									</h2>
+									<p class="parcelamento-text">
+										Suas vendas parceladas poderão ser cobradas com ou sem acréscimo para seus clientes. Quando você opta por cobrar sem<br>
+										acréscimo, a taxa de parcelamento é descontada do valor final que você recebe. Já com acréscimo, quem paga a taxa é o seu cliente.<br>
+										Confira esta tabela que vai ajudar você a calcular os valores sempre que fizer uma venda parcelada. Imprima a tabela e tenha essas informações sempre à mão!
+									</p>
+									<section class="parcelamento-tabela"></section>
+									<section class="imprimir-tabela">
+										<p class="btn-imprimir-tabela">
+											<a data-ga="voce-conecta|Imprimir_Tabela|Botao" class="btn-link btn-print" href="http://localhost:3000/tabela-parcelamento.html" target="_blank">Imprimir tabela</a>
+										</p>
+									</section>
+								</article>
+								
+							</article>
+
+						</div>
+
+						<!-- Gestão de pagamentos -->
+						<div class="card-item gestao-de-pagamentos" data-title="Gestao de pagamentos" data-pgsize="1040" data-tittrack="gestao-de-pagamentos">
+							<article class="card-content">
+								<p class="card-text">
+									A Natura e o Pagseguro prepararam a melhor oferta do mercado para você! Adquira o leitor, baixe o aplicativo PagNatura e comece<br>
+									a usar. É sem mensalidade. 
+								</p>
+								<div class="cdp-tabs-wrap">
+									<div class="cdp-tabs">
+										<p class="cdp-tab actived" data-tab="estornar">
+											Estornar
+										</p>
+										<p class="cdp-tab" data-tab="transferir">
+											Transferir
+										</p>
+									</div>
+									<div class="cdp-tab-content">
+										<div class="cdp-tab-wrapcont cdp-estornar" data-tab="estornar" data-trackscroll="voce-conecta|card_gestao-de-pagamentos|estornar-end" data-trackscrollend="true">
+											<p class="text">
+												<strong class="high">
+													Como devolver o pagamento para o cliente depois do dia da venda
+												</strong>
+											</p>
+											<ol class="cdp-list-steps border-b">
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">1</span>
+														<i class="icon-sq-planet"></i>
+													</div>
+													<p class="text">
+														Acesse sua conta no
+														site do PagSeguro.
+													</p>
+												</li>
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">2</span>
+														<i class="icon-sq-ticket"></i>
+													</div>
+													<p class="text">
+														No menu, acesse a op&ccedil;&atilde;o <br />
+														&ldquo;Extrato de transa&ccedil;&otilde;es&rdquo; <br />
+														e escolha a transa&ccedil;&atilde;o que <br />
+														deseja estornar.
+													</p>
+												</li>
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">3</span>
+														<i class="icon-sq-hand"></i>
+													</div>
+													<p class="text">
+														Clique em &ldquo;Devolver <br />
+														dinheiro ao comprador&rdquo; <br />
+														e confirme a devolu&ccedil;&atilde;o.
+													</p>
+												</li>
+												<li class="cdp-step last">
+													<div class="cdp-img">
+														<span class="num">4</span>
+														<i class="icon-sq-check"></i>
+													</div>
+													<p class="text">
+														Voc&ecirc; retornar&aacute; para a <br />
+														tela de transa&ccedil;&otilde;es e sua <br />
+														venda vai aparecer como <br />
+														&ldquo;Devolvida&quot;.
+													</p>
+												</li>
+											</ol>
+											<p class="text">
+												<strong class="high">
+													Como devolver o pagamento para o cliente no mesmo dia da venda
+												</strong>
+											</p>
+											<ol class="cdp-list-steps type-2">
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">1</span>
+														<i class="icon-sq-file"></i>
+													</div>
+													<p class="text">
+														No menu do aplicativo <br />
+														PagNatura, acesse a <br />
+														op&ccedil;&atilde;o &ldquo;Relat&oacute;rio&rdquo;.
+													</p>
+												</li>
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">2</span>
+														<i class="icon-sq-transaction"></i>
+													</div>
+													<p class="text">
+														Escolha a transa&ccedil;&atilde;o <br />
+														que deseja estornar e <br />
+														clique no bot&atilde;o &ldquo;Estornar&quot;.
+													</p>
+												</li>
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">3</span>
+														<i class="icon-sq-cardmachine"></i>
+													</div>
+													<p class="text">
+														Insira o cartão do cliente no <br>
+														seu leitor (na lateral, se for <br>
+														um cartão com chip), ou passe 
+														na parte superior, se for sem
+														chip. Aguarde.
+													</p>
+												</li>
+												<li class="cdp-step last">
+													<div class="cdp-img">
+														<span class="num">4</span>
+														<i class="icon-sq-cel"></i>
+													</div>
+													<p class="text">
+														Uma mensagem &eacute; exibida <br />
+														na tela do aplicativo <br />
+														confirmando o estorno. <br />
+														Confira os detalhes do <br />
+														pagamento estornado.
+													</p>
+												</li>
+											</ol>
+											<ol class="cdp-list-steps type-2 wd-fixed">
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">5</span>
+														<i class="icon-sq-tiket-2"></i>
+													</div>
+													<p class="text">
+														Caso queira enviar o <br />
+														comprovante para o seu <br />
+														cliente, clique em &ldquo;Enviar <br />
+														comprovante&rdquo;.
+													</p>
+												</li>
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">6</span>
+														<i class="icon-sq-emailarr"></i>
+													</div>
+													<p class="text">
+														Digite o e-mail do cliente <br />
+														e clique em &ldquo;Enviar&rdquo;.
+													</p>
+												</li>
+												<li class="cdp-step last">
+													<div class="cdp-img">
+														<span class="num">7</span>
+														<i class="icon-sq-cel"></i>
+													</div>
+													<p class="text">
+														Uma mensagem de confirmação do envio do comprovante aparecerá na tela do aplicativo.
+													</p>
+												</li>
+											</ol>
+										</div>
+										<div class="cdp-tab-wrapcont cdp-transferir" data-tab="transferir" data-trackscroll="voce-conecta|card_gestao-de-pagamentos|transferir-end" data-trackscrollend="true">
+											<p class="text">
+												<strong class="high">
+													Como transferir seu saldo do PagNatura para sua conta banc&aacute;ria
+												</strong>
+											</p>
+											<ol class="cdp-list-steps wd-fixed">
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">1</span>
+														<i class="icon-sq-planet"></i>
+													</div>
+													<p class="text">
+														Acesse o site <br />
+														pagseguro.uol.com.br e <br />
+														informe seu login e senha.
+													</p>
+												</li>
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">2</span>
+														<i class="icon-sq-saque"></i>
+													</div>
+													<p class="text">
+														No menu, acesse a <br />
+														op&ccedil;&atilde;o &ldquo;Transfer&ecirc;ncias&quot; e <br />
+														selecione a op&ccedil;&atilde;o &ldquo;Saques&rdquo;.
+													</p>
+												</li>
+												<li class="cdp-step last">
+													<div class="cdp-img">
+														<span class="num">3</span>
+														<i class="icon-sq-personaldata"></i>
+													</div>
+													<p class="text">
+														Confira seus dados <br />
+														pessoais e selecione <br />
+														uma conta.
+													</p>
+												</li>
+											</ol>
+											<ol class="cdp-list-steps wd-fixed">
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">4</span>
+														<i class="icon-sq-transaction-2"></i>
+													</div>
+													<p class="text">
+														Digite o valor do saque <br />
+														e clique em &ldquo;Continuar&rdquo;.
+													</p>
+												</li>
+												<li class="cdp-step">
+													<div class="cdp-img">
+														<span class="num">5</span>
+														<i class="icon-sq-cal"></i>
+													</div>
+													<p class="text">
+														O dinheiro vai cair na <br />
+														sua conta banc&aacute;ria em <br />
+														at&eacute; 3 dias &uacute;teis ap&oacute;s a <br />
+														solicita&ccedil;&atilde;o do saque.
+													</p>
+												</li>
+												<li class="cdp-step last">
+													<div class="cdp-img">
+														<span class="num">6</span>
+														<i class="icon-sq-check"></i>
+													</div>
+													<p class="text">
+														<span class="bold">Importante:</span> para poder <br />
+														efetuar o saque, voc&ecirc; <br />
+														precisa ter configurado  <br />
+														e verificado a sua conta  <br />
+														com o PagSeguro.
+													</p>
+												</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+
+					</div>
+				</div>
+				<footer class="card-footer">
+					<p class="bulets">
+						<span class="bulet actived"></span>
+						<span class="bulet"></span>
+						<span class="bulet"></span>
+						<span class="bulet"></span>
+						<span class="bulet"></span>
+						<span class="bulet"></span>
+					</p>
+				</footer>
+			</div>
+
+			<div class="list-of-cards">
+
+				<!-- Como Funciona -->
+				<article class="card-wrapper">
+					<section data-href="Como funciona" class="card-content">
+						<section class="card-icon-holder">
+							<i class="card-icon icon-gray-smartphone"></i>
+						</section>
+						<h2 class="card-title">Como funciona</h2>
+						<hr class="spacer">
+						<p class="card-text">
+							Basta estar conectado(a) <br>
+							e ter o aplicativo PagNatura <br>
+							no seu celular.
+						</p>
+						<p class="saiba-mais-holder">
+							<a class="btn-card-saiba-mais" href="#">
+								<i class="icon-red-saiba-mais"></i>
+								Saiba mais
+							</a>
+						</p>
+					</section>
+				</article>
+				
+				<!-- Adiquirir um leitor -->
+				<article class="card-wrapper">
+					<section data-href="Adiquirir um leitor" class="card-content leitor">
+						<section class="card-icon-holder">
+							<i class="card-icon icon-gray-leitor"></i>
+						</section>
+						<h2 class="card-title">Adquirir um leitor</h2>
+						<hr class="spacer">
+						<p class="card-text">
+							Compre aqui o seu leitor de <br>
+							cartões e receba na sua casa.
+						</p>
+						<p class="saiba-mais-holder">
+							<a class="btn-card-saiba-mais" href="#">
+								<i class="icon-red-saiba-mais"></i>
+								Saiba mais
+							</a>
+						</p>
+					</section>
+				</article>
+		
+				<!-- Como configurar -->		
+				<article class="card-wrapper">
+					<section data-href="Como configurar" class="card-content">
+						<section class="card-icon-holder">
+							<i class="card-icon icon-gray-smartphone-config"></i>
+						</section>
+						<h2 class="card-title">Como configurar</h2>
+						<hr class="spacer">
+						<p class="card-text">
+							Veja como configurar seu <br>
+							leitor e seu celular para <br>
+							começar a usar.
+						</p>
+						<p class="saiba-mais-holder">
+							<a class="btn-card-saiba-mais" href="#">
+								<i class="icon-red-saiba-mais"></i>
+								Saiba mais
+							</a>
+						</p>
+					</section>
+				</article>
+
+				<!-- Como utilizar -->
+				<article class="card-wrapper">
+					<section data-href="Como utilizar" class="card-content">
+						<section class="card-icon-holder">
+							<i class="card-icon icon-gray-tv"></i>
+						</section>
+						<h2 class="card-title">Como utilizar</h2>
+						<hr class="spacer">
+						<p class="card-text">
+							Assista ao vídeo e entenda <br>
+							como usar o PagNatura no <br>
+							seu dia a dia.
+						</p>
+						<p class="saiba-mais-holder">
+							<a class="btn-card-saiba-mais" href="#">
+								<i class="icon-red-saiba-mais"></i>
+								Saiba mais
+							</a>
+						</p>
+					</section>
+				</article>
+				
+				<!-- Taxas e Tarifas -->
+				<article class="card-wrapper">
+					<section data-href="Taxas e Tarifas" class="card-content">
+						<section class="card-icon-holder">
+							<i class="card-icon icon-gray-taxa-tarifas"></i>
+						</section>
+						<h2 class="card-title">Taxas e Tarifas</h2>
+						<hr class="spacer">
+						<p class="card-text">
+							As melhores taxas do <br>
+							mercado, sem mensalidade <br>
+							ou taxa de adesão.
+						</p>
+						<p class="saiba-mais-holder">
+							<a class="btn-card-saiba-mais" href="#">
+								<i class="icon-red-saiba-mais"></i>
+								Saiba mais
+							</a>
+						</p>
+					</section>
+				</article>
+
+				<!-- Gestão de Pagamentos -->
+				<article class="card-wrapper">
+					<section data-href="Gestão de Pagamentos" class="card-content pagamentos">
+						<section class="card-icon-holder">
+							<i class="card-icon icon-gray-pagamentos"></i>
+						</section>
+						<h2 class="card-title">Gestão de pagamentos</h2>
+						<hr class="spacer">
+						<p class="card-text">
+							Entenda como estornar <br>
+							e gerenciar seus pagamentos.
+						</p>
+						<p class="saiba-mais-holder">
+							<a class="btn-card-saiba-mais" href="#">
+								<i class="icon-red-saiba-mais"></i>
+								Saiba mais
+							</a>
+						</p>
+					</section>
+				</article>
+			</div>
+
+		</section>			
 	</section>
 
-	<!-- Box Tools -->
-	<section class="pagnatura-cards">
-		<section class="box-tools">	
+	<!-- Middle -->
+	<section class="pagnatura-faixa" data-trackscroll="voce-conecta|corpo|scroll-half">
+		<section class="pagnatura-faixa-wrapper">
+			<h2 class="title">
+				Você já tem <br>
+				um leitor do <br>
+				PagSeguro?
+			</h2>
+			<p class="text-leitor">
+				Então pode continuar com seu leitor atual. <br>
+				Você só precisa se cadastrar no PagNatura <br>
+				e fazer o download do aplicativo no seu <br>
+				celular ou tablet.
+			</p>
+			<section class="pagnatura-cloud cloud">
+				<p class="btn-cadastro">
+					<a data-ga="voce-conecta|corpo|ja-tenho-leitor" class="btn-link" href="#">Clique aqui e faça seu cadastro</a>
+				</p>				
+			</section>
+		</section>
+	</section>
+	
+	<!-- Footer -->
+	<section class="pagnatura-footer-wrapper">
+		<section class="pagnatura-footer-content">
 			
-			<!-- Header -->
-			<section class="box-tools-header">
-				<h2 class="title-box-tools">
-					Conheça as ferramentas que vão agilizar suas vendas
-				</h2>
-				<p class="subtitle-box-tools">
-					São 3 ferramentas diferentes feitas para valorizar seu trabalho!
+			<!-- PagNatura Atendimento -->
+			<section class="pagnatura-atendimento">
+				<i class="icon-red-atendimento"></i>
+				<h2 class="atendimento-title">Central de Atendimento Natura (CAN)</h2>
+				<span class="atendimento-tel">0800-7628872</span>
+				<p class="horario-atendimento italic">
+					Segunda a sexta, das 8h às <br>
+					22h e sábado, das 9h às 20h
 				</p>
 			</section>
 
-			<hr class="spacer">
+			<div class="spacer"></div>
 
-			<!-- Footer -->
-			<section class="box-tools-footer pagnatura-mais-info">	
+			<!-- PagNatura Dúvidas -->
+			<section class="pagnatura-duvidas">
+				<i class="icon-red-duvida"></i>
+				<h2 class="duvidas-title">Dúvidas</h2>
+				<p class="duvidas-text italic">
+					Tire suas dúvidas sobre o leitor <br>
+					com o autoatendimento da Natura.
+				</p>
+				<a data-ga="voce-conecta|corpo|duvidas" class="btn-cards-red" href="http://autoatendimento.natura.com.br/autoatendimento" target="_blank">Clique aqui</a>
+			</section>
+			
+			<!-- PagNatura Mais informações -->
+			<section class="pagnatura-mais-info">
+
+				<!-- Veja também -->
+				<section class="veja-tambem">
+					<div class="veja-tambem-divider"></div>
+					<h3 class="veja-tambem-title">Veja também</h3>
+					<p class="veja-tambem-text">
+						Conheça as outras ferramentas <br>
+						que a Natura disponibiliza para <br>
+						facilitar sua atividade de <br>
+						Consultoria e aproximar você <br>
+						cada vez mais de seus clientes.
+					</p>
+				</section>
+
 				<!-- Chip Natura Pré -->
 				<article class="mais-info-box" data-trackscroll="voce-conecta|footer|scroll-end" data-trackscrollend="true">
 					<div class="box-chip-natura"></div>
@@ -744,7 +1601,7 @@
 						Consultor(a) Natura. 
 					</p>
 					<p class="btn-saiba-mais-info">
-						<a data-ga="voce-conecta|corpo|chip-natura" class="btn-link" href="/chip.html">Saiba mais</a>
+						<a data-ga="voce-conecta|corpo|chip-natura" class="btn-link" href="#">Saiba mais</a>
 					</p>
 				</article>
 
@@ -758,33 +1615,116 @@
 						celular ou tablet.
 					</p>
 					<p class="btn-saiba-mais-info">
-						<a data-ga="voce-conecta|corpo|app-pedidos" class="btn-link" href="/aplicativo.html">Saiba mais</a>
+						<a data-ga="voce-conecta|corpo|app-pedidos" class="btn-link" href="#">Saiba mais</a>
 					</p>
 				</article>
 
-				<!-- PagSeguro -->
-				<article class="mais-info-box">
-					<div class="box-chip-leitor"></div>
-					<h2 class="mais-info-title">Aplicativo Pedidos Natura</h2>
-					<p class="mais-info-text">				
-						Faça e organize seus pedidos a qualquer hora e em qualquer lugar
-						por meio desse aplicativo para
-						celular ou tablet.
-					</p>
-					<p class="btn-saiba-mais-info">
-						<a data-ga="voce-conecta|corpo|app-pedidos" class="btn-link" href="/pagnatura.html">Saiba mais</a>
-					</p>
-				</article>
 			</section>
+
 		</section>
-	</section>	
+	</section>
+	
+	<!-- Modal Termos de Uso -->
+	<!-- 
+	loop modal termos adiquirir um leitor 
+	Ele utiliza o ID setado no atributo data-idmodal do elemento.
+	O valor setado nesse atributo vai buscar o ID no padrao: pn-modal- 
+	Ex.: 
+	<section id="pn-modal-1" class="pagnatura-modal">...</<section>
+	<section id="pn-modal-2" class="pagnatura-modal">...</<section>
+	-->
+	<section id="pn-modal-1" class="pagnatura-modal">
+		<div class="pagnatura-modal-box">
+			<div class="icon-close-tr-right btn-close"></div>
+			<div class="modal-holder">
+				<p class="warning-text">
+					<span class="bold">Atenção:</span> Você será redirecionado para um ambiente fora da Natura. Para continuar, você deve ler e aceitar os termos de uso da Natura.
+				</p>
+				<h2 class="termos-title">
+					Termos de uso
+				</h2>
+				<div class="scroll-pane">
+					<div class="termos-de-uso scroll-pane">
+							<p>Condições da Oferta</p>
+							<br>
+							<p>1.Aquisição do Chip Natura:</p>
+							<br>
+							<p>1.1.O Chip Natura é comercializado pela Natura, fruto de uma parceria com a Claro. Os serviços de telecomunicações são de responsabilidade exclusiva da Claro e deverão ser contratados diretamente por você junto a tal empresa.</p>
+							<br>
+							<p>1.2.Ao adquirir o Chip Natura você está ciente e de acordo que a Claro informará à Natura o CPF e o número de telefone atribuídos ao Chip Natura no momento da ativação dos serviços de telecomunicações, com a finalidade de que a Natura possa enviar SMS com conteúdos de teor comercial e avisos.</p>
+							<br>
+							<p>2.Aquisição do Combo Você Conect@: Chip Natura + Leitor PagSeguro + Vale Pontos</p>
+							<br>
+							<p>2.1.Ao escolher a oferta do Combo Você Conect@ você será direcionado ao site da PagSeguro para concretizar a compra o leitor de cartão de crédito/débito PagSeguro. Você autoriza a Natura a repassar à PagSeguro seus dados cadastrais, a fim de facilitar o processo de abertura de seu cadastro perante à PagSeguro.</p>
+							<br>
+							<p>2.2.O leitor de cartão de crédito/débito PagSeguro é adquirido por você diretamente com a PagSeguro, aplicando-se portanto todos os termos e condições aceitos por você junto à própria PagSeguro.</p>
+							<br>
+							<p>2.3.A aquisição do leitor PagSeguro está condicionada à aprovação de seu cadastro pela PagSeguro, podendo ser negada. Em caso de rejeição do seu cadastro pela PagSeguro, você poderá sanar a causa da rejeição e adquirir novamente o Combo, desde que o mesmo ainda esteja disponível.</p>
+							<br>
+							<p>2.4.Caso a venda do leitor não seja aprovada ou seja cancelada por qualquer razão, a aquisição do Combo será completamente cancelada e você não será cobrado(a) por qualquer valor (caso a cobrança já tenha sido processada pelo cartão de crédito, o valor será estornado pela PagSeguro).</p> 
+							<br>
+							<p>2.5.O Vale-Pontos e o Chip Natura serão disponibilizados para resgate pela Natura em até 30 (trinta) dias após a entrega do Leitor PagSeguro a você. </p>
+							<br>
+							<p>2.6.Após a Natura disponibilizar o Chip Natura para resgate, você irá recebe-lo junto com a caixa </p>
+							<br>
+							<p>2.7.Após a Natura disponibilizar o Vale-Pontos, você poderá resgatar 20 (vinte) pontos a cada ciclo e terá o prazo de 1 (um) ano para realizar o resgate (contado a partir da disponibilização do Vale-Pontos pela Natura).</p>
+							<br>
+							<p>2.8.Em caso de cessação (deixar de ser CN), você perde direito a eventuais Vale-Pontos pendentes de resgate.</p>
+							<br>
+							<p>2.9.A aquisição do Combo é limitada a apenas 1 (uma) unidade por Consultor(a) Natura. </p>
+					</div>
+				</div>
+				<p class="btn-nao-aceito">
+					<a class="btn-link" href="#">Não aceito</a>
+				</p>
+				<p class="btn-li-aceito">
+					<a class="btn-link" href="#">Li e aceito, quero continuar</a>
+				</p>
+			</div>
+		</div>
+	</section>
+	<!-- / loop modal termos adiquirir um leitor -->
+
+	<!-- Modal Termos de Uso 2 (Clique Aqui e Faça Seu Cadastro) -->
+	<section id="pn-modal-cloud" class="pagnatura-modal">
+		<div class="pagnatura-modal-box">
+			<div class="icon-close-tr-right btn-close"></div>
+			<div class="modal-holder">
+				<p class="warning-text">
+					<span class="bold">Atenção:</span> Você será redirecionado para um ambiente fora da Natura. Para continuar, você deve ler e aceitar os termos de uso da Natura.
+				</p>
+				<h2 class="termos-title">
+					Termos de uso
+				</h2>
+				<div class="scroll-pane">
+					<div class="termos-de-uso scroll-pane">
+						<p>Condições da Oferta</p>
+						<br>
+						<p>Adesão à Oferta PagNatura</p>
+						<br>
+						<p>1.1.	Ao escolher aderir à Oferta PagNatura você será direcionado ao site do PagSeguro para finalizar a adesão. Você autoriza a Natura a repassar ao PagSeguro seus dados cadastrais, a fim de facilitar o processo de abertura de seu cadastro perante ao PagSeguro.</p>
+						<br>
+						<p>1.2.	A adesão à Oferta PagNatura está condicionada à aprovação de seu cadastro pelo PagSeguro, podendo ser negada. Em caso de rejeição do seu cadastro pelo PagSeguro, você poderá sanar a causa da rejeição e aderir à Oferta PagNatura novamente, desde que a mesma ainda esteja disponível.</p>
+						<br>
+						<p>1.3.	Em caso de cessação (deixar de ser CN), você perde direito às taxas exclusivas da Oferta.</p>
+					</div>
+				</div>
+				<p class="btn-nao-aceito">
+					<a data-ga="voce-conecta|termos_faca-seu-cadastro|nao-aceito" class="btn-link" href="#">Não aceito</a>
+				</p>
+				<p class="btn-li-aceito">
+					<a data-ga="voce-conecta|termos_faca-seu-cadastro|aceito" class="btn-link" href="#">Li e aceito, quero continuar</a>
+				</p>
+			</div>
+		</div>
+	</section>
 
 </section>
 
 <!-- scrips da aplicacao -->
 <script type="text/javascript">
 $(document).ready(function($) {
-	loadjs('http://www.salveinterativa.com.br/natura_voce-conecta/js/main.js');
+	loadjs('http://localhost:3000/js/main.js');
 });
 </script>
 <!-- // scrips da aplicacao -->

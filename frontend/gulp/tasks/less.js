@@ -14,7 +14,10 @@ var path = require('path'),
 
 gulp.task('less', function() {
 	return gulp.src([
-		path.join(srcPath, 'less', 'home.less')
+		path.join(srcPath, 'less', 'index.less'),
+		path.join(srcPath, 'less', 'aplicativo.less'),
+		path.join(srcPath, 'less', 'chip.less'),
+		path.join(srcPath, 'less', 'pagnatura.less'),
 	])
 	.pipe(less({
 		sourceMap: true,

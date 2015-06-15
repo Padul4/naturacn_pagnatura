@@ -1,0 +1,585 @@
+.list-of-cards {
+    overflow: hidden
+}
+.pagnatura-cards {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 110px;
+    margin-bottom: 50px
+}
+.pagnatura-cards.clr-margin {
+    margin-bottom: 0;
+    display: block
+}
+.pagnatura-cards .card-wrapper {
+    -webkit-box-shadow: 4px 4px 10px #9d9d9d;
+    -moz-box-shadow: 4px 4px 10px #9d9d9d;
+    box-shadow: 4px 4px 10px #9d9d9d;
+    width: 314px;
+    height: 162px;
+    float: left;
+    background-color: #fff;
+    position: relative;
+    padding-top: 46px;
+    margin: 6px;
+    border-bottom: 2px solid #ca4b36;
+    font-size: 20px;
+    font-family: 'gill_sans_std_bold';
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition-duration: .3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out
+}
+.pagnatura-cards .card-wrapper:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px)
+}
+.pagnatura-cards .card-wrapper .card-icon-holder {
+    float: left;
+    margin: 27px 28px 0 20px;
+    display: block;
+    height: 93px
+}
+.pagnatura-cards .card-content.leitor .card-icon-holder,
+.pagnatura-cards .card-content.pagamentos .card-icon-holder {
+    margin: 35px 15px 0 11px
+}
+.pagnatura-cards .card-content.leitor,
+.pagnatura-cards .card-content.pagamentos {
+    margin-top: 7px
+}
+.pagnatura-cards .card-wrapper .btn-card-saiba-mais {
+    color: #ca4b36;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'gill_sans';
+    font-size: 12px;
+    float: right
+}
+.pagnatura-cards .card-wrapper .card-text {
+    font-family: 'gill_sans';
+    font-size: 16px;
+    line-height: 20px
+}
+.card-item.como-funciona .card-details-2 .card-details-text .bold,
+.card-item.como-funciona .card-text .voce-precisa {
+    font-family: 'gill_sans_std_bold'
+}
+.pagnatura-cards .card-wrapper .spacer {
+    border-style: dashed;
+    border-color: #545454;
+    margin-right: 45px;
+    width: 205px
+}
+.pagnatura-cards .card-wrapper .btn-card-saiba-mais {
+    display: block;
+    line-height: 43px
+}
+.pagnatura-cards .card-wrapper .saiba-mais-holder {
+    position: absolute;
+    right: -2px;
+    bottom: -2px
+}
+.pagnatura-cards .card-wrapper .saiba-mais-holder .icon-red-saiba-mais {
+    float: right
+}
+.card-item.como-utilizar .card-text {
+    float: left
+}
+.card-item.como-utilizar .media-holder-video {
+    float: right;
+    width: 600px;
+    height: 370px
+}
+.card-item.como-configurar .card-text {
+    float: left
+}
+.card-item.como-configurar .media-holder-video {
+    float: right;
+    width: 600px;
+    height: 370px
+}
+.card-item.como-funciona .card-text .voce-precisa {
+    margin: 25px 0;
+    display: block
+}
+.card-item.como-funciona .card-details-1 {
+    width: 415px;
+    height: 150px;
+    float: left;
+    border-top: 1px dashed #545454;
+    border-bottom: 1px dashed #545454
+}
+.card-item.como-funciona .card-details-1 .card-details-icon-holder {
+    float: left;
+    margin-top: 55px;
+    margin-right: 20px;
+    height: 60px
+}
+.card-item.como-funciona .card-details-1 .card-details-text {
+    margin-top: 45px
+}
+.card-item.como-funciona .card-details-1 .card-details-text .btn-cards-orange {
+    margin-top: 13px;
+    display: block
+}
+.card-item.como-funciona .card-details-1 .card-details-text .btn-cards-orange:before {
+    content: "";
+    margin-right: 5px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #f76c03
+}
+.card-item.como-funciona .card-details-2 {
+    width: 415px;
+    height: 150px;
+    margin-left: 54px;
+    float: left;
+    border-top: 1px dashed #545454;
+    border-bottom: 1px dashed #545454
+}
+.card-item.como-funciona .card-details-2 .card-details-icon-holder {
+    float: left;
+    margin-top: 55px;
+    margin-right: 20px;
+    height: 60px
+}
+.card-item.como-funciona .card-details-2 .btn-google-play {
+    display: block;
+    float: left;
+    margin-top: 10px;
+    margin-right: 20px
+}
+.card-item.como-funciona .card-details-2 .btn-apple-store {
+    display: block;
+    float: left;
+    margin-top: 10px
+}
+.card-item.como-funciona .card-details-2 .card-details-text {
+    margin-top: 18px
+}
+.card-item.como-funciona .card-details-2 .card-details-text .bullet-orange {
+    color: #f76c03
+}
+.card-item.como-funciona .card-details-2 .card-details-text .btn-cards-orange {
+    margin-top: 5px;
+    display: block
+}
+.card-item.leitor .card-text {
+    text-align: center
+}
+.card-item.leitor .combo-holder {
+    overflow: hidden
+}
+.card-item.leitor .combo-holder .card-details-1 {
+    width: 415px;
+    height: 180px;
+    float: left;
+    background: #f9f9f9;
+    border: 2px solid #dadada;
+    margin: 11px;
+    overflow: hidden
+}
+.card-item.leitor .combo-holder .card-details-1 .card-details-icon-holder {
+    float: left;
+    margin-top: 17px;
+    margin-right: 20px;
+    height: 132px;
+    margin-left: -10px
+}
+.card-item.leitor .combo-holder .card-details-1 .card-details-text {
+    margin-top: 45px;
+    font-family: 'gill_sans_std_bold'
+}
+.card-item.leitor .combo-holder .card-details-1 .spacer {
+    border: 1px dashed #b0b1b2;
+    margin-right: 30px
+}
+.card-item.leitor .combo-holder .card-details-1 .card-details-info {
+    font-family: 'gill_sans'
+}
+.card-item.leitor .combo-holder .card-details-1 .card-details-info .bold {
+    font-family: 'gill_sans_std_bold'
+}
+.card-item.leitor .combo-holder .card-details-1 .card-details-info .small {
+    font-size: 12px
+}
+.card-item.leitor .combo-holder .card-details-1 .card-details-info .pontos-natura {
+    font-family: 'gill_sans';
+    margin-top: 5px;
+    display: block
+}
+.card-item.leitor .combo-holder .card-details-1 .card-details-info .pontos-natura.italic {
+    font-family: 'gill_sans_italic'
+}
+.card-item.leitor .combo-holder .card-details-1 .btn-compre-agora {
+    margin-top: 17px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out
+}
+.card-item.leitor .combo-holder .card-details-1 .btn-compre-agora:hover {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px)
+}
+.card-item.leitor .combo-holder-empty {
+    overflow: hidden
+}
+.card-item.leitor .combo-holder-empty .card-details-empty .card-content-empty {
+    margin: 70px auto;
+    width: 420px
+}
+.card-item.leitor .combo-holder-empty .card-details-empty .card-content-empty .icon-red-atencao {
+    margin: 0 auto;
+    width: 48px;
+    display: block
+}
+.card-item.leitor .combo-holder-empty .card-details-empty .card-content-empty .empty-text {
+    margin-top: 15px;
+    color: #ca4b36
+}
+.card-item.leitor .card-details-2 .card-details-text .bullet-orange,
+.card-item.leitor .card-details-3 .card-details-text .bullet-orange {
+    color: #f76c03
+}
+.card-item.leitor .card-details-2 {
+    height: 150px;
+    margin-left: 13px;
+    float: left
+}
+.card-item.leitor .card-details-2 .card-details-icon-holder {
+    float: left;
+    margin-top: 55px;
+    margin-right: 20px;
+    height: 60px
+}
+.card-item.leitor .card-details-2 .card-details-text {
+    margin-top: 20px
+}
+.card-item.leitor .card-details-2 .card-details-text .regras-resgate {
+    margin-bottom: 10px
+}
+.card-item.leitor .card-details-2 .card-details-text .bold {
+    margin-bottom: 10px;
+    display: block
+}
+.card-item.leitor .card-details-3 {
+    margin-top: 35px;
+    height: 110px;
+    width: 870px;
+    float: left;
+    border-top: 1px solid #cacbcc;
+    border-bottom: 1px solid #cacbcc
+}
+.card-item.leitor .card-details-3 .card-details-icon-holder {
+    float: left;
+    margin-top: 22px;
+    margin-right: 10px;
+    height: 110px
+}
+.card-item.leitor .card-details-3 .card-details-text {
+    margin-top: 36px
+}
+.card-item.leitor .card-details-3 .card-details-text .bold {
+    font-family: 'gill_sans_std_bold'
+}
+.card-item.taxas-tarifas .cartoes {
+    height: 284px
+}
+.card-item.taxas-tarifas .cartoes .card-details-1 {
+    width: 430px;
+    height: 260px;
+    float: left;
+    background: #f9f9f9;
+    border: 2px solid #dadada;
+    margin-top: 30px;
+    margin-right: 15px;
+    overflow: hidden;
+    text-align: center
+}
+.card-item.taxas-tarifas .cartoes .card-details-1 .credito-a-vista {
+    font-family: 'gill_sans_std_bold';
+    margin-top: 17px
+}
+.card-item.taxas-tarifas .cartoes .card-details-1 .spacer {
+    border: 1px dashed #cacbcc;
+    width: 350px
+}
+.card-item.taxas-tarifas .cartoes .card-details-1 .credito-a-vista-text {
+    margin: 10px 0
+}
+.card-item.taxas-tarifas .cartoes .card-details-1 .credito-a-vista-text.italic {
+    font-family: 'gill_sans_italic'
+}
+.card-item.taxas-tarifas .cartoes .card-details-1 .gray-divider {
+    display: block
+}
+.card-item.taxas-tarifas .cartoes .card-details-1 .card-details-text {
+    margin-top: 45px;
+    font-family: 'gill_sans_std_bold'
+}
+.card-item.taxas-tarifas .cartoes .card-details-1 .bold {
+    font-family: 'gill_sans_std_bold'
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 {
+    width: 430px;
+    height: 260px;
+    float: left;
+    background: #f9f9f9;
+    border: 2px solid #dadada;
+    margin-top: 30px;
+    overflow: hidden;
+    text-align: center
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 .credito-debito {
+    font-family: 'gill_sans_std_bold';
+    margin-top: 17px
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 .spacer {
+    border: 1px dashed #cacbcc;
+    width: 350px
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 .credito-debito-text {
+    margin: 10px 0
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 .credito-debito-text.italic {
+    font-family: 'gill_sans_italic'
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 .gray-divider {
+    display: block
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 .bandeira-cartoes {
+    margin: 0 auto
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 .card-details-text {
+    margin-top: 45px;
+    font-family: 'gill_sans_std_bold'
+}
+.card-item.taxas-tarifas .cartoes .card-details-2 .bold {
+    font-family: 'gill_sans_std_bold'
+}
+.card-item.taxas-tarifas .cartoes-obs {
+    font-family: 'gill_sans_italic';
+    font-size: 16px;
+    margin-top: 20px
+}
+.card-item.taxas-tarifas .simulador-natura {
+    margin-top: 20px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-title {
+    font-family: 'gill_sans_std_bold';
+    font-size: 25px;
+    color: #545454;
+    margin-bottom: 10px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-text {
+    font-family: 'gill_sans';
+    font-size: 16px;
+    color: #545454;
+    margin: 8px 0
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content {
+    background-color: #f9f9f9;
+    border: 2px solid #dadada;
+    overflow: hidden;
+    height: 175px;
+    margin: 13px 0
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .valor-considerado {
+    width: 185px;
+    padding-top: 36px;
+    padding-left: 26px;
+    float: left
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .valor-considerado .valor-considerado-text {
+    font-family: 'gill_sans';
+    color: #545454;
+    text-align: center
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .valor-considerado .valor-considerado-quantia {
+    font-size: 26px;
+    font-family: 'gill_sans_std_bold';
+    text-align: center;
+    padding-top: 10px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-opcoes {
+    width: 337px;
+    height: 175px;
+    float: left
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-opcoes .opcoes-holder {
+    width: 210px;
+    margin-top: 37px;
+    margin-left: 80px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-opcoes .opcoes-holder .opcoes-text {
+    font-family: 'gill_sans';
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 16px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-opcoes .opcoes-holder .btn-simular-option {
+    background-color: #fff;
+    cursor: pointer;
+    color: #ca4b36;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    width: 38px;
+    padding: 5px 10px;
+    margin-right: 8px;
+    border: 1px solid transparent
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-opcoes .opcoes-holder .btn-simular-option.a-vista {
+    display: block;
+    text-align: center;
+    width: 195px;
+    text-transform: uppercase;
+    padding: 7px 0
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-opcoes .opcoes-holder .btn-simular-option.selected {
+    border: 1px solid #f76c03;
+    background-color: #ffeac9
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-taxas .taxa-porcentagem {
+    float: left;
+    margin-left: 40px;
+    margin-top: 35px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-taxas .taxa-porcentagem .taxa-porcentagem-text {
+    text-align: center;
+    font-family: 'gill_sans';
+    font-size: 18px;
+    color: #545454;
+    margin-bottom: 16px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-taxas .taxa-porcentagem .valor-porcentagem {
+    font-size: 26px;
+    font-family: 'gill_sans_std_bold';
+    text-align: center
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-taxas .spacer-vertical-bar {
+    float: left;
+    margin: 10px 30px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-taxas .taxa-real {
+    float: left;
+    margin-top: 35px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-taxas .taxa-real .taxa-porcentagem-text {
+    text-align: center;
+    font-family: 'gill_sans';
+    font-size: 18px;
+    color: #545454;
+    margin-bottom: 16px
+}
+.card-item.taxas-tarifas .simulador-natura .simulador-content .simulador-taxas .taxa-real .valor-porcentagem {
+    font-size: 26px;
+    font-family: 'gill_sans_std_bold';
+    text-align: center
+}
+.card-item.taxas-tarifas .simulador-obs {
+    font-family: 'gill_sans_italic';
+    font-size: 16px
+}
+.card-item.taxas-tarifas .spacer-conteudo {
+    margin: 30px 0;
+    border: 1px dashed #cacbcc
+}
+.card-item.taxas-tarifas .parcelamento .parcelamento-title {
+    font-family: 'gill_sans_std_bold';
+    font-size: 25px;
+    color: #545454;
+    margin-bottom: 10px
+}
+.card-item.taxas-tarifas .parcelamento .parcelamento-text {
+    font-family: 'gill_sans';
+    font-size: 16px;
+    color: #545454;
+    margin: 8px 0
+}
+.card-item.taxas-tarifas .parcelamento .parcelamento-tabela {
+    background: url(../img/parcelas.jpg);
+    width: 670px;
+    height: 440px;
+    margin-top: 20px;
+    overflow: hidden;
+    float: left
+}
+.card-item.taxas-tarifas .parcelamento .imprimir-tabela {
+    background: #dadada;
+    text-align: center;
+    width: 190px;
+    height: 440px;
+    float: right;
+    margin-top: 20px
+}
+.card-item.taxas-tarifas .parcelamento .imprimir-tabela .btn-imprimir-tabela {
+    margin-top: 210px
+}
+.card-item.taxas-tarifas .parcelamento .imprimir-tabela .btn-imprimir-tabela a {
+    padding: 10px 13px;
+    font-size: 15px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out
+}
+.card-item.taxas-tarifas .parcelamento .imprimir-tabela .btn-imprimir-tabela a:hover {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px)
+}
+.card-item.gestao-de-pagamentos .card-content>.card-text {
+    margin-bottom: 20px
+}
+.card-item.gestao-de-pagamentos .cdp-tabs-wrap .cdp-tabs {
+    overflow: hidden
+}
+.card-item.gestao-de-pagamentos .cdp-tabs-wrap .cdp-tabs .cdp-tab {
+    width: 50%;
+    float: left;
+    border: 2px solid #dadada;
+    background-color: #e5e5e5;
+    font-family: 'gill_sans_std_bold';
+    text-align: center;
+    color: #f76c03;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 0;
+    font-size: 18px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear
+}
