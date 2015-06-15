@@ -1,4 +1,3 @@
-// refazer
 import Cards from './cards';
 
 
@@ -49,6 +48,20 @@ var Main = {
 
     $('.pagnatura-cloud .btn-cadastro .btn-link').unbind('click').bind('click', function() {
       $('#pn-modal-cloud').fadeIn(function() {
+        trackPageviewGA('/www/consultoria/apoio-ao-consultor/voce-conecta/termos-de-uso/faca-seu-cadastro', 'Voce_Conecta - Termos - Faca Seu Cadastro | Natura');
+        $('body').addClass('modalOpened');
+      });
+    });
+
+    $('.app-header .orange-circle').unbind('click').bind('click', function() {
+      $('#pn-modal1').fadeIn(function() {
+        trackPageviewGA('/www/consultoria/apoio-ao-consultor/voce-conecta/termos-de-uso/faca-seu-cadastro', 'Voce_Conecta - Termos - Faca Seu Cadastro | Natura');
+        $('body').addClass('modalOpened');
+      });
+    });
+
+    $('.app-middle .btn-compre-agora').unbind('click').bind('click', function() {
+      $('#pn-modal2').fadeIn(function() {
         trackPageviewGA('/www/consultoria/apoio-ao-consultor/voce-conecta/termos-de-uso/faca-seu-cadastro', 'Voce_Conecta - Termos - Faca Seu Cadastro | Natura');
         $('body').addClass('modalOpened');
       });
@@ -116,7 +129,25 @@ $(document).ready(function() {
   });
 
   // Simular valor button list-of-cards
-  $('.pagnatura-beneficios .btn-saiba-mais, .pagnatura-beneficios btn-compre-agora').on('click', function (e){
+  $('#pagnatura-page .pagnatura-beneficios .btn-saiba-mais, #pagnatura-page .pagnatura-beneficios btn-compre-agora').on('click', function (e){
+    e.preventDefault();
+    $('html,body').animate({scrollTop: $('.pagnatura-cards').offset().top},'slow');
+  });
+
+  // Button scroll to Box Tools
+  $('#voceconecta-page .pagnatura-header-content .btn-saiba-mais').on('click', function (e){
+    e.preventDefault();
+    $('html,body').animate({scrollTop: $('.box-tools').offset().top},'slow');
+  });
+
+  // Button scroll to App Content
+  $('#aplicativo-page .pagnatura-beneficios .btn-saiba-mais').on('click', function (e){
+    e.preventDefault();
+    $('html,body').animate({scrollTop: $('.app-content').offset().top},'slow');
+  });
+
+  // Button scroll to App Content
+  $('#chip-page .beneficios-footer .btn-saiba-mais').on('click', function (e){
     e.preventDefault();
     $('html,body').animate({scrollTop: $('.pagnatura-cards').offset().top},'slow');
   });
@@ -143,5 +174,8 @@ $(document).ready(function() {
   }
 
   animaLabel();
+
+
+
 
 });

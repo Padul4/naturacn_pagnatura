@@ -7,7 +7,9 @@
     border: 0;
     outline: 0;
     vertical-align: baseline;
-    letter-spacing: 0
+    letter-spacing: 0;
+    color: @gray_light;
+    font-family: @mainFont;
 }
 .pagnatura-header-wrapper .label-shadow {
     top: -18px
@@ -130,6 +132,23 @@
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px)
 }
+.pagnatura-header-wrapper .pagnatura-beneficios .btn-saiba-mais {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out
+}
+.pagnatura-header-wrapper .pagnatura-beneficios .btn-saiba-mais:hover {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px)
+}
 .pagnatura-header-wrapper .pagnatura-beneficios .beneficios-footer .btn-saiba-mais {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -171,13 +190,25 @@
     border-top: 1px dashed #b4b4b4;
     width: 170px
 }
-h2.app-title {
-    margin-top: 90px
+.pagnatura-header-wrapper .app-content{
+    margin-top: 80px;
 }
 .pagnatura-header-wrapper .app-content .app-header {
     padding: 50px 90px;
     border-bottom: 1px dashed #b4b4b4;
-    margin-bottom: 60px
+    margin-bottom: 50px;
+    position: relative;
+}
+.pagnatura-header-wrapper .app-content .app-header .orange-circle{
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+    top: 270px;
+    .circle-text{
+        font-size: 14px;
+        text-transform: none;
+        margin-top: 22px;
+    }
 }
 .pagnatura-header-wrapper .app-content .app-header .app-title {
     font-size: 20px;
@@ -208,7 +239,7 @@ h2.app-title {
 }
 .pagnatura-header-wrapper .app-content .app-middle {
     text-align: center;
-    margin-bottom: 60px
+    margin-bottom: 50px
 }
 .pagnatura-header-wrapper .app-content .app-middle .middle-title {
     font-size: 24px;
@@ -216,26 +247,46 @@ h2.app-title {
     font-family: 'gill_sans_std_bold'
 }
 .pagnatura-header-wrapper .app-content .app-middle .middle-text {
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'gill_sans'
 }
 .pagnatura-header-wrapper .app-content .app-middle .middle-btns {
-    margin-top: 50px;
+    margin-top: 40px;
+    height: 60px;
     position: relative;
     overflow: hidden
 }
 .pagnatura-header-wrapper .app-content .app-middle .middle-btns .btn-compre-agora {
     float: left;
-    border-right: 1px solid #b3b3b3;
-    padding-right: 60px;
-    margin-left: 230px
+    margin-left: 230px;
+    display: block;
+    margin-top: 13px;
+    cursor: pointer;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out
+}
+.pagnatura-header-wrapper .app-content .app-middle .middle-btns .btn-compre-agora:hover{
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px)
 }
 .pagnatura-header-wrapper .app-content .app-middle .middle-btns .btn-app-lojas {
-    float: left
+    float: left;
+    border-left: 1px solid #b3b3b3;
+    margin-left: 55px;
+    margin-top: 7px;
 }
 .pagnatura-header-wrapper .app-content .app-middle .middle-btns .btn-app-lojas .btn-google-play {
     margin-left: 60px;
-    margin-right: 10px
+    margin-right: 10px;
 }
 .pagnatura-header-wrapper .app-content .app-footer {
     border-bottom: 1px dashed #b4b4b4
@@ -245,4 +296,10 @@ h2.app-title {
     background-color: #ededed;
     text-align: center;
     padding: 30px 0
+}
+.pagnatura-header-wrapper .app-content .app-footer .app-footer-holder .footer-text{
+    .bold{
+        text-decoration: none;
+        color: @gray_light;
+    }
 }

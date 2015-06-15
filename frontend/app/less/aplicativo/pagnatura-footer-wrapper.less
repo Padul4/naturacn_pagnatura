@@ -39,7 +39,22 @@
     float: left
 }
 .pagnatura-footer-wrapper .pagnatura-footer-content .pagnatura-duvidas .duvidas-holder .btn-saiba-mais {
-    float: right
+    float: right;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out
+}
+.pagnatura-footer-wrapper .pagnatura-footer-content .pagnatura-duvidas .duvidas-holder .btn-saiba-mais:hover{
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px)
 }
 .pagnatura-footer-wrapper .pagnatura-footer-content .pagnatura-mais-info {
     height: 580px;

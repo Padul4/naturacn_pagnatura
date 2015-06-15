@@ -20,6 +20,12 @@ var Cards = {
 		this.$cdpTab = $('.cdp-tab');
 		this.$comoConf = $('.card-item.como-configurar .media-holder-video');
 		this.$comoUtil = $('.card-item.como-utilizar .media-holder-video');
+		this.$videoHome = $('.pagnatura-header .media-holder-video');
+		this.$fazerPedido = $('#pn-modal1 .media-holder-video');
+		this.$fazerDownload = $('#pn-modal2 .media-holder-video');
+
+
+
 
 		this.c_item = 0;
 		this.itemSize = 980;
@@ -126,7 +132,7 @@ var Cards = {
 
 		$('.pagnatura-beneficios .btn-compre-agora').on('click', function(e) {
 			e.preventDefault();
-
+			$('html,body').animate({scrollTop: $('.app-content').offset().top},'slow');
 			if (_that.isOpened) {
 				_that.goTo(1, 0)
 			} else {
@@ -135,6 +141,23 @@ var Cards = {
 				_that.goTo(1, 0);
 				_that.setHeight();
 				_that.showContent(1, function() {
+					_that.$father.addClass('actived');
+				});
+			}
+		});
+
+		$('.text-chip-info-holder .orange-circle').on('click', function(e) {
+			e.preventDefault();
+			$('html,body').animate({scrollTop: $('.pagnatura-cards').offset().top},'slow')
+
+			if (_that.isOpened) {
+				_that.goTo(2, 0)
+			} else {
+				_that.$section.addClass('clr-margin');
+				_that.$listCards.fadeOut();
+				_that.goTo(2, 0);
+				_that.setHeight();
+				_that.showContent(2, function() {
 					_that.$father.addClass('actived');
 				});
 			}
@@ -247,6 +270,15 @@ var Cards = {
 				videoId: 'CYE6sl7RFxI'
 			});
 			_that.plrFrasco = Pr.Youtube.createPlayer(_that.$comoUtil, {
+				videoId: 'Vjp8WpkTcEI'
+			});
+			_that.plrHome = Pr.Youtube.createPlayer(_that.$videoHome, {
+				videoId: 'Vjp8WpkTcEI'
+			});
+			_that.plrHome = Pr.Youtube.createPlayer(_that.$fazerPedido, {
+				videoId: 'Vjp8WpkTcEI'
+			});
+			_that.plrHome = Pr.Youtube.createPlayer(_that.$fazerDownload, {
 				videoId: 'Vjp8WpkTcEI'
 			});
 			
