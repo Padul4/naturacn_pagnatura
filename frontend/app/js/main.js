@@ -102,8 +102,6 @@ var Main = {
 $(document).ready(function() {
 	Main.init();
 
-  $('.scrollpane').jScrollPane();
-  
   // Simular valor button
   $('.btn-simular-option').on('click', function (e){
     var $valorPocentagem = $('.valor-porcentagem');

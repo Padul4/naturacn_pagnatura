@@ -1,0 +1,98 @@
+.list-of-cards {
+	overflow: hidden;
+}
+.pagnatura-cards{
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	margin-top: 110px;
+	margin-bottom: 50px;
+	&.clr-margin {
+		margin-bottom: 0;
+		display: block;
+	}
+}
+.pagnatura-cards .card-wrapper{
+	.box-shadow(4px 4px 10px #9d9d9d);
+	width: 314px;
+	height: 162px;
+	float: left;
+	background-color: @white;
+	position: relative;
+	padding-top: 46px;
+	margin: 6px 6px;
+	border-bottom: 2px solid @red_light;
+	font-size: 20px;
+	font-family: @mainFontBold;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+		&:hover{
+			-webkit-transform: translateY(-5px);
+			transform: translateY(-5px);
+		};
+}
+.pagnatura-cards .card-wrapper .card-icon{
+
+}
+.pagnatura-cards .card-wrapper .card-icon-holder{
+	float: left;
+	margin: 27px 28px 0 20px;
+	display: block;
+	height: 93px;
+}
+.pagnatura-cards .card-content.leitor .card-icon-holder,
+.pagnatura-cards .card-content.pagamentos .card-icon-holder{
+	margin: 35px 15px 0 11px;
+}
+
+.pagnatura-cards .card-content.leitor,
+.pagnatura-cards .card-content.pagamentos{
+	margin-top: 7px;
+
+}
+.pagnatura-cards .card-wrapper .card-icon-holder .icon-gray-pagamentos{
+
+}
+.pagnatura-cards .card-wrapper .btn-card-saiba-mais{
+	color: @red_light;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: @mainFont;
+	font-size: 12px;
+	float: right;
+} 
+.pagnatura-cards .card-wrapper .card-title{
+}
+.pagnatura-cards .card-wrapper .card-text{
+	font-family: @mainFont;
+	font-size: 16px;
+	line-height: 20px;	
+}
+.pagnatura-cards .card-wrapper .spacer{
+	border-style: dashed;
+	border-color: @gray_light;
+	margin-right: 45px;
+	width: 205px;
+
+}
+.pagnatura-cards .card-wrapper .btn-card-saiba-mais{
+	display: block;
+	line-height: 43px;
+}
+.pagnatura-cards .card-wrapper .saiba-mais-holder{
+	position: absolute;
+	right: -2px;
+	bottom: -2px;
+}
+.pagnatura-cards .card-wrapper .saiba-mais-holder .icon-red-saiba-mais{
+	float: right
+}
