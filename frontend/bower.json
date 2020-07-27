@@ -1,9 +1,9 @@
 {
-  "name": "Balaio",
+  "name": "Piema",
   "version": "1.0",
   "description": "Sistema para gerenciamento do projeto",
   "authors": [
-    "Raphael Lopes"
+    "Lucas Padula"
   ],
   "license": "MIT",
   "ignore": [
